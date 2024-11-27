@@ -1,4 +1,4 @@
-import BtnPresupuesto from '@/components/BtnPresupuesto'
+import FormularioAlerta from '@/components/ui/FormularioAlerta'
 import ItemServices from '@/components/ui/ItemServices'
 import Services from '@/components/ui/Services'
 import Testimonios from '@/components/ui/Testimonios'
@@ -20,8 +20,8 @@ export default function Home({ posts }) {
               nuestro equipo de expertos se encarga de todo: desde la planificación hasta la
               ejecución, con la garantía de calidad y compromiso 👇
             </h1>
-            <BtnPresupuesto text="Presupuesto Gratis" />
-          </div>
+          <FormularioAlerta text='Presupuesto Gratis'/>                                    
+            </div>
           <div className="relative h-[300px] w-[450px] ">
             <Image
               className="absolute left-16 top-8 rounded-xl"
@@ -47,9 +47,7 @@ export default function Home({ posts }) {
           </div>
         </article>
         <div className="flex flex-wrap justify-evenly pb-32 pt-24 ">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <ItemServices key={item} />
-          ))}
+            <ItemServices/>
         </div>
         <Services />
         <Testimonios />

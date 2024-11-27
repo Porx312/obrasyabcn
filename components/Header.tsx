@@ -5,9 +5,10 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import FormularioAlerta from './ui/FormularioAlerta'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
+  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-7 sticky top-0 z-50 '
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -42,6 +43,7 @@ const Header = () => {
               </Link>
             ))}
         </div>
+        <FormularioAlerta className='hover:scale-105 transition-all' text='Pide Presupuesto' />
         <SearchButton />
         <ThemeSwitch />
         <MobileNav />

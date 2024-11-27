@@ -2,17 +2,17 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
-import { Pagination, Navigation, FreeMode, Autoplay } from 'swiper/modules'
-import servicesData from '@/data/servicesData'
+import { Pagination, FreeMode, Autoplay } from 'swiper/modules'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 
 import './slideshow.css'
+import servicesData from '@/data/servicesData'
 
 // import required modules
 
-export default function App() {
+export default function ServicesSlideShow() {
   return (
     <div className=" h-[300px] w-[420px] overflow-hidden rounded-lg lg:w-[500px]">
       <Swiper

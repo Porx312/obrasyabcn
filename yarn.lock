@@ -7794,6 +7794,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.462.0":
+  version: 0.462.0
+  resolution: "lucide-react@npm:0.462.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+  checksum: ffeb54d9c22e6625727f6dc863ae4cde952dbc02ff50c96179f3c0ce14b2f9a63ae8472fe86387c17a534bdae1ca0f518e81c47553a4f97718139805befc625e
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^13.0.0":
   version: 13.0.1
   resolution: "make-fetch-happen@npm:13.0.1"
@@ -11289,6 +11298,24 @@ react@rc:
   languageName: node
   linkType: hard
 
+"sweetalert2-react-content@npm:^5.0.7":
+  version: 5.0.7
+  resolution: "sweetalert2-react-content@npm:5.0.7"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    sweetalert2: ^11.0.0
+  checksum: 383eb9dd6d16b6331c1bb6633e507323b3606b79832c8b5eb7871641d547228d719a914a23ddf7e0105ae7dd07663909ce03f64d1484e6c039bd6bbd4325bc86
+  languageName: node
+  linkType: hard
+
+"sweetalert2@npm:^11.14.5":
+  version: 11.14.5
+  resolution: "sweetalert2@npm:11.14.5"
+  checksum: 6c7f37120f6d5143214279a50c3b6db244222b0b4ba14751ef03e4678e5020e8ea42f0019c0719d6753883bf283b3a3bf2dc00fc62dd37e63c8f31f8041b7978
+  languageName: node
+  linkType: hard
+
 "swiper@npm:^11.1.15":
   version: 11.1.15
   resolution: "swiper@npm:11.1.15"
@@ -11351,6 +11378,7 @@ react@rc:
     husky: ^9.0.0
     image-size: 1.0.0
     lint-staged: ^13.0.0
+    lucide-react: ^0.462.0
     next: 15.0.2
     next-contentlayer2: 0.5.3
     next-themes: ^0.3.0
@@ -11372,6 +11400,8 @@ react@rc:
     remark-gfm: ^4.0.0
     remark-github-blockquote-alert: ^1.2.1
     remark-math: ^6.0.0
+    sweetalert2: ^11.14.5
+    sweetalert2-react-content: ^5.0.7
     swiper: ^11.1.15
     tailwindcss: ^3.4.14
     typescript: ^5.1.3
