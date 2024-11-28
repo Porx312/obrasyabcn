@@ -16,7 +16,7 @@ import reviewsData from '@/data/Reviews'
 
 export default function SlideShowTestimonios() {
   return (
-    <div className=" h-[400px] w-[420px] overflow-hidden rounded-lg lg:w-[500px]">
+    <div className=" h-[400px] w-full overflow-hidden rounded-lg lg:w-[500px]">
       <Swiper
         style={
           {

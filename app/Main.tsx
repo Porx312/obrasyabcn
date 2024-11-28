@@ -51,11 +51,12 @@ export default function Home({ posts }) {
         <div className="flex flex-wrap justify-evenly pb-10 pt-20 ">
           <ItemServices />
         </div>
-        <Services /> 
-         <Testimonios /> 
-        <FAQSection />
-      <FloatingWhatsAppButton />
+       <Services /> 
+      <Testimonios /> 
+          <FAQSection /> 
+          <FloatingWhatsAppButton/>
       </section>
+
       {/*    {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />

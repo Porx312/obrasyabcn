@@ -45,7 +45,7 @@ const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {
         className="flex w-full items-center justify-between py-5 text-left"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-lg font-medium text-gray-900">{item.question}</span>
+        <span className="text-lg font-medium">{item.question}</span>
         <ChevronDownIcon
           className={`h-5 w-5 text-gray-500 transition-transform duration-200 ${
             isOpen ? 'rotate-180 transform' : ''
@@ -54,7 +54,7 @@ const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {
       </button>
       {isOpen && (
         <div className="pb-5 pr-12">
-          <p className="text-base text-gray-500">{item.answer}</p>
+          <p className="text-base">{item.answer}</p>
         </div>
       )}
     </div>

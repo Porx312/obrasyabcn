@@ -14,7 +14,7 @@ import servicesData from '@/data/servicesData'
 
 export default function ServicesSlideShow() {
   return (
-    <div className=" h-[300px] w-[420px] overflow-hidden rounded-lg lg:w-[500px]">
+    <div className=" h-[300px] w-full bg-blue-400 overflow-hidden rounded-lg lg:w-[500px]">
       <Swiper
         style={
           {

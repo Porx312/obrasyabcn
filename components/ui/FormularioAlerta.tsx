@@ -1,18 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import UseFormEmail from 'Hooks/UseFormEmail'
 import ReactModal from 'react-modal'
-import { useForm } from 'react-hook-form'
-import emailjs from '@emailjs/browser'
-
-interface FormData {
-  email: string
-  numero: string
-  servicio: string
-  nombre: string
-  codigoPostal: string
-  comentario: string
-}
 
 const servicios = [
   'Reforma integral',
@@ -28,51 +17,19 @@ interface FormularioAlertaProps {
 }
 
 export default function FormularioAlerta({ className, text }: FormularioAlertaProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<FormData>()
 
+  const { handleSubmit, isOpen, onSubmit, register, setIsOpen, closeModal, errors, formStatus } =  UseFormEmail()
   // Función para manejar el cierre del modal
-  const closeModal = () => setIsOpen(false)
 
   // Función para manejar el envío del formulario
-  const onSubmit = async (data: FormData) => {
-    console.log('Formulario enviado:', data)
-    try {
-      // Enviar el formulario con EmailJS
-      const response = await emailjs.send(
-        'service_6uvz7di', // Reemplazar con tu Service ID
-        'template_vr3w5rl', // Reemplazar con tu Template ID
-        {
-          nombre: data.nombre,
-          email: data.email,
-          numero: data.numero,
-          servicio: data.servicio,
-          codigoPostal: data.codigoPostal,
-          comentario: data.comentario,
-        },
-        'VRqRX_09wtqOHiv9l' // Reemplazar con tu Public Key
-      )
 
-      console.log('Formulario enviado con éxito', response.text)
-      reset() // Limpiar el formulario después de enviarlo
-      closeModal() // Cerrar el modal después de enviarlo
-    } catch (error) {
-      console.error('Error al enviar el formulario:', error)
-      alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.')
-    }
-  }
 
   return (
     <div>
       {/* Botón para abrir el modal */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`w-[200px] rounded-lg bg-orange-700 p-3 text-white transition-all hover:bg-orange-800 ${className}`}
+        className={` rounded-lg bg-orange-700 p-3 text-white transition-all hover:bg-orange-800 ${className}`}
       >
         {text}
       </button>
@@ -199,6 +156,7 @@ export default function FormularioAlerta({ className, text }: FormularioAlertaPr
             </button>
           </div>
         </form>
+        {formStatus && <div className="mt-4 text-center text-sm text-gray-700">{formStatus}</div>}
       </ReactModal>
     </div>
   )

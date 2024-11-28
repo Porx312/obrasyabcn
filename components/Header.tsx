@@ -6,6 +6,7 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 import FormularioAlerta from './ui/FormularioAlerta'
+import FloatingWhatsAppButton from './ui/FloatingWhatsAppButton'
 
 const Header = () => {
   let headerClass =
@@ -17,6 +18,7 @@ const Header = () => {
   return (
     <header className={headerClass}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
+      
         <div className="flex items-center justify-between">
           <div className="mr-3">
             <Logo />
@@ -44,7 +46,7 @@ const Header = () => {
               </Link>
             ))}
         </div>
-        <FormularioAlerta className="transition-all hover:scale-105 lg:w-[200px] w-[130px] text-sm" text="Pide Presupuesto" />
+        <FormularioAlerta text='presupuesto 👇' className=''/>
         <SearchButton />
         <ThemeSwitch />
         <MobileNav />
