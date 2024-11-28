@@ -14,10 +14,10 @@ const Services = () => {
           dolores rerum natus laboriosam voluptas laudantium. Aliquam ratione et sunt magni.
           Perspiciatis laborum quos veniam, delectus libero culpa necessitatibus!
         </p>
-        <FormularioAlerta text="Pide Presupuesto!" />
+        <FormularioAlerta text="¿Empezamos?" />
       </div>
       <div className="flex w-[500px] flex-wrap justify-between gap-2 ">
-          <ServicesSlideShow/>
+        <ServicesSlideShow />
       </div>
     </article>
   )

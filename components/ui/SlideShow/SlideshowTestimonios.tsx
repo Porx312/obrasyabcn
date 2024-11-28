@@ -14,7 +14,6 @@ import reviewsData from '@/data/Reviews'
 
 // import required modules
 
-
 export default function SlideShowTestimonios() {
   return (
     <div className=" h-[400px] w-[420px] overflow-hidden rounded-lg lg:w-[500px]">
@@ -37,7 +36,15 @@ export default function SlideShowTestimonios() {
       >
         {reviewsData.map((item, index) => (
           <SwiperSlide key={index} className="relative flex cursor-pointer items-center">
-            <ReviewCard avatarUrl={item.avatarUrl} date={item.date} name={item.name} comment={item.comment} likes={item.likes} projectType={item.projectType} rating={item.rating} />
+            <ReviewCard
+              avatarUrl={item.avatarUrl}
+              date={item.date}
+              name={item.name}
+              comment={item.comment}
+              likes={item.likes}
+              projectType={item.projectType}
+              rating={item.rating}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

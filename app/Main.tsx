@@ -1,5 +1,7 @@
+import FloatingWhatsAppButton from '@/components/ui/FloatingWhatsAppButton'
 import FormularioAlerta from '@/components/ui/FormularioAlerta'
 import ItemServices from '@/components/ui/ItemServices'
+import FAQSection from '@/components/ui/PreguntasFaq'
 import Services from '@/components/ui/Services'
 import Testimonios from '@/components/ui/Testimonios'
 import siteMetadata from '@/data/siteMetadata'
@@ -20,8 +22,8 @@ export default function Home({ posts }) {
               nuestro equipo de expertos se encarga de todo: desde la planificación hasta la
               ejecución, con la garantía de calidad y compromiso 👇
             </h1>
-          <FormularioAlerta text='Presupuesto Gratis'/>                                    
-            </div>
+            <FormularioAlerta text="Presupuesto gratis" />
+          </div>
           <div className="relative h-[300px] w-[450px] ">
             <Image
               className="absolute left-16 top-8 rounded-xl"
@@ -47,11 +49,13 @@ export default function Home({ posts }) {
           </div>
         </article>
         <div className="flex flex-wrap justify-evenly pb-32 pt-24 ">
-            <ItemServices/>
+          <ItemServices />
         </div>
         <Services />
         <Testimonios />
+        <FAQSection />
       </section>
+      <FloatingWhatsAppButton />
       {/*    {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
