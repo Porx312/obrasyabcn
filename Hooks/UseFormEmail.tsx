@@ -27,11 +27,7 @@ const UseFormEmail = () => {
 
   const onSubmit = async (data: FormData) => {
     setFormStatus("loading"); // Set loading status while sending
-
     // Log environment variables to check if they are being loaded correctly
-    console.log('EmailJS Public Key:', process.env.NEXT_PUBLIC_EMAILSJS_PUBLIC_KEY);
-    console.log('EmailJS Service ID:', process.env.NEXT_PUBLIC_EMAILSJS_SERVICE_ID);
-
     try {
       // Send the form data with EmailJS
       const response = await emailjs.send(

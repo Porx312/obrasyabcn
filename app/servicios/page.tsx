@@ -6,7 +6,7 @@ export default function Servicios() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-slate-100 py-20 rounded-xl">
+      <section className=" py-20 rounded-xl">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">¡Dale Vida y Color a Tu Hogar con las Reformas de Pintura de Reformas Ya Barcelona!</h1>
           <p className="text-xl mb-8">¿Te gustaría que tu hogar tuviera el toque perfecto que siempre soñaste? ¡Hazlo realidad con una reforma de pintura que lo transforme por completo!</p>

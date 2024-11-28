@@ -15,9 +15,9 @@ export default function ContactoReformas() {
 
 
   return (
-    <div className="mx-auto max-w-md rounded-lg bg-white p-6 shadow-md">
-      <h2 className="mb-6 text-center text-2xl font-bold">Contacta con nosotros</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="w-[380px] space-y-5">
+    <div className="mx-auto max-w-md rounded-lg  bg-white p-6 shadow-md">
+      <h2 className="mb-6 text-center text-2xl text-black font-bold">Contacta con nosotros</h2>
+      <form onSubmit={handleSubmit(onSubmit)} className=" space-y-5">
           {/* Email */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -27,7 +27,7 @@ export default function ContactoReformas() {
               id="email"
               type="email"
               {...register('email', { required: 'Email es obligatorio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full rounded-md border  text-black px-3 py-2"
             />
             {errors.email && <span className="text-sm text-red-500">{errors.email.message}</span>}
           </div>
@@ -41,7 +41,7 @@ export default function ContactoReformas() {
               id="telefono"
               type="tel"
               {...register('numero', { required: 'Teléfono es obligatorio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full rounded-md text-black border px-3 py-2"
             />
             {errors.numero && <span className="text-sm text-red-500">{errors.numero.message}</span>}
           </div>
@@ -54,7 +54,7 @@ export default function ContactoReformas() {
             <select
               id="servicio"
               {...register('servicio', { required: 'Selecciona un servicio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full rounded-md text-black border px-3 py-2"
             >
               <option value="">Seleccione un servicio</option>
               {servicios.map((servicio) => (
@@ -77,7 +77,7 @@ export default function ContactoReformas() {
               id="nombre"
               type="text"
               {...register('nombre', { required: 'Nombre es obligatorio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full rounded-md border text-black px-3 py-2"
             />
             {errors.nombre && <span className="text-sm text-red-500">{errors.nombre.message}</span>}
           </div>
@@ -91,7 +91,7 @@ export default function ContactoReformas() {
               id="codigoPostal"
               type="text"
               {...register('codigoPostal', { required: 'Código Postal es obligatorio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full rounded-md border text-black px-3 py-2"
             />
             {errors.codigoPostal && (
               <span className="text-sm text-red-500">{errors.codigoPostal.message}</span>
@@ -106,7 +106,7 @@ export default function ContactoReformas() {
             <textarea
               id="comentario"
               {...register('comentario')}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full rounded-md border text-black px-3 py-2"
               rows={3}
             ></textarea>
           </div>

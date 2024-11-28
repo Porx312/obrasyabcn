@@ -43,9 +43,9 @@ export default function FormularioAlerta({ className, text }: FormularioAlertaPr
         className="modal mx-auto max-w-lg rounded-md bg-white p-8 shadow-lg"
         overlayClassName="overlay z-50 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
       >
-        <h2 className="mb-4 text-xl font-semibold">Formulario de Contacto</h2>
+        <h2 className="mb-4 text-xl text-black font-semibold">Formulario de Contacto</h2>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="w-[380px] space-y-5">
+        <form onSubmit={handleSubmit(onSubmit)} className="w-[280px] space-y-5">
           {/* Email */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -55,7 +55,7 @@ export default function FormularioAlerta({ className, text }: FormularioAlertaPr
               id="email"
               type="email"
               {...register('email', { required: 'Email es obligatorio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full text-black rounded-md border px-3 py-2"
             />
             {errors.email && <span className="text-sm text-red-500">{errors.email.message}</span>}
           </div>
@@ -69,7 +69,7 @@ export default function FormularioAlerta({ className, text }: FormularioAlertaPr
               id="telefono"
               type="tel"
               {...register('numero', { required: 'Teléfono es obligatorio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full text-black rounded-md border px-3 py-2"
             />
             {errors.numero && <span className="text-sm text-red-500">{errors.numero.message}</span>}
           </div>
@@ -82,7 +82,7 @@ export default function FormularioAlerta({ className, text }: FormularioAlertaPr
             <select
               id="servicio"
               {...register('servicio', { required: 'Selecciona un servicio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full text-black rounded-md border px-3 py-2"
             >
               <option value="">Seleccione un servicio</option>
               {servicios.map((servicio) => (
@@ -105,7 +105,7 @@ export default function FormularioAlerta({ className, text }: FormularioAlertaPr
               id="nombre"
               type="text"
               {...register('nombre', { required: 'Nombre es obligatorio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full text-black rounded-md border px-3 py-2"
             />
             {errors.nombre && <span className="text-sm text-red-500">{errors.nombre.message}</span>}
           </div>
@@ -119,7 +119,7 @@ export default function FormularioAlerta({ className, text }: FormularioAlertaPr
               id="codigoPostal"
               type="text"
               {...register('codigoPostal', { required: 'Código Postal es obligatorio' })}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full rounded-md text-black border px-3 py-2"
             />
             {errors.codigoPostal && (
               <span className="text-sm text-red-500">{errors.codigoPostal.message}</span>
@@ -134,7 +134,7 @@ export default function FormularioAlerta({ className, text }: FormularioAlertaPr
             <textarea
               id="comentario"
               {...register('comentario')}
-              className="w-full rounded-md border px-3 py-2"
+              className="w-full text-black rounded-md border px-3 py-2"
               rows={3}
             ></textarea>
           </div>
