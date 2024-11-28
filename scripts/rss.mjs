@@ -9,18 +9,24 @@ import { sortPosts } from 'pliny/utils/contentlayer.js'
 
 const outputFolder = process.env.EXPORT ? 'out' : 'public'
 
+/**
+ * Generate an individual RSS feed item
+ */
 const generateRssItem = (config, post) => `
   <item>
     <guid>${config.siteUrl}/blog/${post.slug}</guid>
     <title>${escape(post.title)}</title>
     <link>${config.siteUrl}/blog/${post.slug}</link>
-    ${post.summary && `<description>${escape(post.summary)}</description>`}
+    ${post.summary ? `<description>${escape(post.summary)}</description>` : ''}
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
     <author>${config.email} (${config.author})</author>
-    ${post.tags && post.tags.map((t) => `<category>${t}</category>`).join('')}
+    ${post.tags ? post.tags.map((t) => `<category>${escape(t)}</category>`).join('') : ''}
   </item>
 `
 
+/**
+ * Generate the complete RSS feed XML
+ */
 const generateRss = (config, posts, page = 'feed.xml') => `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
@@ -30,34 +36,45 @@ const generateRss = (config, posts, page = 'feed.xml') => `
       <language>${config.language}</language>
       <managingEditor>${config.email} (${config.author})</managingEditor>
       <webMaster>${config.email} (${config.author})</webMaster>
-      <lastBuildDate>${new Date(posts[0].date).toUTCString()}</lastBuildDate>
-      <atom:link href="${config.siteUrl}/${page}" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>${new Date(posts[0]?.date || new Date()).toUTCString()}</lastBuildDate>
+      <atom:link href="${config.siteUrl}/${page}" rel="self" type="application/rss+xml" />
       ${posts.map((post) => generateRssItem(config, post)).join('')}
     </channel>
   </rss>
 `
 
+/**
+ * Generate RSS feeds for the main blog and for tags
+ */
 async function generateRSS(config, allBlogs, page = 'feed.xml') {
-  const publishPosts = allBlogs.filter((post) => post.draft !== true)
-  // RSS for blog post
+  const publishPosts = allBlogs.filter((post) => !post.draft)
   if (publishPosts.length > 0) {
+    // Generate main blog RSS
     const rss = generateRss(config, sortPosts(publishPosts))
-    writeFileSync(`./${outputFolder}/${page}`, rss)
-  }
+    writeFileSync(path.join(outputFolder, page), rss)
 
-  if (publishPosts.length > 0) {
+    // Generate RSS feeds for each tag
     for (const tag of Object.keys(tagData)) {
-      const filteredPosts = allBlogs.filter((post) => post.tags.map((t) => slug(t)).includes(tag))
-      const rss = generateRss(config, filteredPosts, `tags/${tag}/${page}`)
-      const rssPath = path.join(outputFolder, 'tags', tag)
-      mkdirSync(rssPath, { recursive: true })
-      writeFileSync(path.join(rssPath, page), rss)
+      const filteredPosts = publishPosts.filter((post) =>
+        post.tags.map((t) => slug(t)).includes(tag)
+      )
+      if (filteredPosts.length > 0) {
+        const tagRss = generateRss(config, filteredPosts, `tags/${tag}/${page}`)
+        const tagRssPath = path.join(outputFolder, 'tags', tag)
+        mkdirSync(tagRssPath, { recursive: true })
+        writeFileSync(path.join(tagRssPath, page), tagRss)
+      }
     }
   }
 }
 
+/**
+ * Main RSS generation function
+ */
 const rss = () => {
   generateRSS(siteMetadata, allBlogs)
-  console.log('RSS feed generated...')
+    .then(() => console.log('RSS feed generated successfully.'))
+    .catch((error) => console.error('Error generating RSS feed:', error))
 }
+
 export default rss
