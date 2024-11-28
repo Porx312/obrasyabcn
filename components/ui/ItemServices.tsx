@@ -17,7 +17,7 @@ const services = [
   { Icon: HammerIcon, title: 'Carpintería' },
   { Icon: Plug2Icon, title: 'Instalaciones eléctricas' },
   { Icon: PipetteIcon, title: 'Fontanería' },
-  { Icon: DropletIcon, title: 'Impermeabilizaciones' },
+  { Icon: DropletIcon, title: 'Impermeabilizacion' },
   { Icon: CircuitBoardIcon, title: 'Pladur' },
   { Icon: Paintbrush2Icon, title: 'Pintura' },
 ]
@@ -35,7 +35,7 @@ const ItemServices = () => {
         {services.map(({ Icon, title }) => (
           <li
             key={title}
-            className="flex w-[170px] cursor-pointer flex-col items-center justify-center rounded-xl bg-neutral-200 p-4 text-black shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg lg:w-[250px]"
+            className="flex w-[140px] cursor-pointer flex-col items-center justify-center rounded-xl bg-neutral-200 p-4 text-black shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg lg:w-[250px]"
           >
             <Icon size={24} className="mb-2" />
             <span className="text-center font-semibold">{title}</span>

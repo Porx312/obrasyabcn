@@ -21,8 +21,8 @@ export default function ReviewCard({
   likes,
 }: ReviewCardProps) {
   return (
-    <div className="mx-auto w-full max-w-md overflow-hidden rounded-lg bg-white shadow-lg">
-      <div className="p-4">
+    <div className="mx-auto w-[300px] md:w-full max-w-md overflow-hidden rounded-lg shadow-lg">
+      <div className="p-1">
         <div className="flex items-center gap-4">
           <div className="h-16 w-16 overflow-hidden rounded-full bg-gray-200">
             <img

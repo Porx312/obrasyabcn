@@ -44,7 +44,7 @@ const Header = () => {
               </Link>
             ))}
         </div>
-        <FormularioAlerta className="transition-all hover:scale-105" text="Pide Presupuesto" />
+        <FormularioAlerta className="transition-all hover:scale-105 lg:w-[200px] w-[130px] text-sm" text="Pide Presupuesto" />
         <SearchButton />
         <ThemeSwitch />
         <MobileNav />

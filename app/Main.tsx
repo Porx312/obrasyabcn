@@ -10,8 +10,8 @@ import Image from 'next/image'
 export default function Home({ posts }) {
   return (
     <>
-      <section className=" flex flex-col justify-start ">
-        <article className=" flex flex-col items-start justify-between lg:flex-row ">
+      <section className=" flex flex-col justify-start items-center ">
+        <article className=" flex flex-col items-center justify-between lg:flex-row ">
           <div className="max-w-[700px] space-y-2 pb-8 pt-3  md:space-y-5">
             <p className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl">
               {siteMetadata.description}.
@@ -24,7 +24,7 @@ export default function Home({ posts }) {
             </h1>
             <FormularioAlerta text="Presupuesto gratis" />
           </div>
-          <div className="relative h-[300px] w-[450px] ">
+          <div className="relative h-[300px] w-[350px] lg:w-[450px] ">
             <Image
               className="absolute left-16 top-8 rounded-xl"
               src="/static/images/reformas/reformas3.jpg"
@@ -48,14 +48,14 @@ export default function Home({ posts }) {
             />
           </div>
         </article>
-        <div className="flex flex-wrap justify-evenly pb-32 pt-24 ">
+        <div className="flex flex-wrap justify-evenly pb-10 pt-20 ">
           <ItemServices />
         </div>
-        <Services />
-        <Testimonios />
+        <Services /> 
+         <Testimonios /> 
         <FAQSection />
-      </section>
       <FloatingWhatsAppButton />
+      </section>
       {/*    {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />

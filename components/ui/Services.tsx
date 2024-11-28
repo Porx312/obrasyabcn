@@ -3,7 +3,7 @@ import ServicesSlideShow from './SlideShow/ServicesSlideshow'
 
 const Services = () => {
   return (
-    <article className=" flex flex-col justify-between  gap-3 pt-10 lg:flex-row">
+    <article className=" flex flex-col items-center justify-between  gap-3 pt-10 lg:flex-row">
       <div className="flex max-w-[700px] flex-col gap-2 ">
         <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl">
           en obras ya barcelona nos enfocamos en
@@ -16,7 +16,7 @@ const Services = () => {
         </p>
         <FormularioAlerta text="¿Empezamos?" />
       </div>
-      <div className="flex w-[500px] flex-wrap justify-between gap-2 ">
+      <div className="flex w-[350px] lg:w-[500px] flex-wrap justify-between gap-2 ">
         <ServicesSlideShow />
       </div>
     </article>
