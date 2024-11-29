@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Paintbrush, Palette, Droplet, Home, CheckCircle } from "lucide-react";
+import FormularioAlerta from "../FormularioAlerta";
 
 export default function DoForYou() {
   return (
@@ -37,12 +38,10 @@ export default function DoForYou() {
               ))}
             </ul>
             <div className="mt-8">
-              <a
-                href="#contacto"
+              <FormularioAlerta
+                text="Solicita Tu Presupuesto gratis"
                 className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
-              >
-                Solicita tu Presupuesto Gratis
-              </a>
+              ></FormularioAlerta>
             </div>
           </div>
           <div className="relative h-96 md:h-full">

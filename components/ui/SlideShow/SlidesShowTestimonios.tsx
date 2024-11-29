@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 import { Pagination, FreeMode, Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";

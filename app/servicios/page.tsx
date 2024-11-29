@@ -1,3 +1,4 @@
+import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
 import FormularioAlerta from "@/components/ui/FormularioAlerta";
 import DoForYou from "@/components/ui/ServicesUi/DoForYou";
 import EngagementSection from "@/components/ui/ServicesUi/Engangement";
@@ -20,6 +21,7 @@ export default function Servicios() {
 
       {/* ¿Por Qué Elegir Reformas Ya Barcelona? */}
       <EngagementSection />
+      <FloatingWhatsAppButton />
     </main>
   );
 }

@@ -124,8 +124,10 @@ export default function EngagementSection() {
                   </p>
                 </div>
               </div>
-              <FormularioAlerta text='Pide Tu Presupuesto gratis' className="mt-6 bg-white text-yellow-500 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">
-              </FormularioAlerta>
+              <FormularioAlerta
+                text="Pide Tu Presupuesto gratis"
+                className="mt-6 bg-white text-yellow-500 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300"
+              ></FormularioAlerta>
             </div>
           </div>
         </div>

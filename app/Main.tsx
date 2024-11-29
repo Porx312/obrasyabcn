@@ -1,5 +1,6 @@
 import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
 import FormularioAlerta from "@/components/ui/FormularioAlerta";
+import HeroSection from "@/components/ui/HeroSection";
 import ItemServices from "@/components/ui/ItemServices";
 import FAQSection from "@/components/ui/PreguntasFaq";
 import Services from "@/components/ui/Services";
@@ -47,6 +48,12 @@ export default function Home({ posts }) {
               height={200}
               alt="Picture"
             />
+            <div className="absolute left-6 -top-4 rounded-lg bg-blue-500 hover:scale-110 translate-x-4 transition-all p-4 shadow-lg">
+              <FormularioAlerta
+                text="🚀 ¡Transforma tu hogar hoy! 🛠️"
+                className="text-base font-bold text-white"
+              ></FormularioAlerta>
+            </div>
           </div>
         </article>
         <div className="flex flex-wrap justify-evenly pb-10 pt-20 ">
