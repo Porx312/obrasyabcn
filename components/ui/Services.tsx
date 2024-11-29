@@ -1,5 +1,5 @@
-import FormularioAlerta from './FormularioAlerta'
-import ServicesSlideShow from './SlideShow/ServicesSlideshow'
+import FormularioAlerta from "./FormularioAlerta";
+import ServicesSlideShow from "./SlideShow/ServicesSlideshow";
 
 const Services = () => {
   return (
@@ -9,10 +9,11 @@ const Services = () => {
           en obras ya barcelona nos enfocamos en
         </h2>
         <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-          {' '}
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, tenetur tempora
-          dolores rerum natus laboriosam voluptas laudantium. Aliquam ratione et sunt magni.
-          Perspiciatis laborum quos veniam, delectus libero culpa necessitatibus!
+          {" "}
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+          tenetur tempora dolores rerum natus laboriosam voluptas laudantium.
+          Aliquam ratione et sunt magni. Perspiciatis laborum quos veniam,
+          delectus libero culpa necessitatibus!
         </p>
         <FormularioAlerta text="¿Empezamos?" />
       </div>
@@ -20,7 +21,7 @@ const Services = () => {
         <ServicesSlideShow />
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

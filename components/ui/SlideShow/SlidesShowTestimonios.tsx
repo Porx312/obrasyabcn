@@ -8,11 +8,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import "./slideshow.css";
-import servicesData from "@/data/servicesData";
+import ReviewCard from "../Review";
+import reviewsData from "@/data/Reviews";
 
 // import required modules
 
-export default function ServicesSlideShow() {
+export default function SlidesShowTestimonios() {
   return (
     <div className=" h-[300px] w-full overflow-hidden rounded-lg lg:w-[500px]">
       <Swiper
@@ -32,29 +33,18 @@ export default function ServicesSlideShow() {
         modules={[FreeMode, Autoplay, Pagination]}
         className="mySwiper2"
       >
-        {servicesData.map((item, index) => (
+        {reviewsData.map((item, index) => (
           <SwiperSlide
             key={index}
             className="relative flex cursor-pointer items-center"
           >
-            <div className="z-10 text-white ">
-              <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-white dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl">
-                {item.title}
-              </h2>
-              <p className="text-lg leading-7 text-white  dark:text-white">
-                {item.description}
-              </p>
-            </div>
-            <div className="absolute inset-0 z-0">
-              <Image
-                src={`${item.imgSrc}`}
-                alt={item.title}
-                layout="fill"
-                objectFit="cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-black opacity-50"></div>
-            </div>
+            <ReviewCard
+              avatarUrl={item.avatarUrl}
+              comment={item.comment}
+              name={item.name}
+              projectType={item.projectType}
+              rating={item.rating}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

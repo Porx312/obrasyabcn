@@ -1,29 +1,28 @@
-import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
-import Link from './Link'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
-import SearchButton from './SearchButton'
-import FormularioAlerta from './ui/FormularioAlerta'
-import FloatingWhatsAppButton from './ui/FloatingWhatsAppButton'
+import siteMetadata from "@/data/siteMetadata";
+import headerNavLinks from "@/data/headerNavLinks";
+import Logo from "@/data/logo.svg";
+import Link from "./Link";
+import MobileNav from "./MobileNav";
+import ThemeSwitch from "./ThemeSwitch";
+import SearchButton from "./SearchButton";
+import FormularioAlerta from "./ui/FormularioAlerta";
+import FloatingWhatsAppButton from "./ui/FloatingWhatsAppButton";
 
 const Header = () => {
   let headerClass =
-    'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-7 sticky top-0 z-50 '
+    "flex items-center w-full bg-white dark:bg-gray-950 justify-between py-7 sticky top-0 z-50 ";
   if (siteMetadata.stickyNav) {
-    headerClass += ' sticky top-0 z-50'
+    headerClass += " sticky top-0 z-50";
   }
 
   return (
     <header className={headerClass}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
-      
         <div className="flex items-center justify-between">
           <div className="mr-3">
             <Logo />
           </div>
-          {typeof siteMetadata.headerTitle === 'string' ? (
+          {typeof siteMetadata.headerTitle === "string" ? (
             <div className="hidden h-6 text-2xl font-semibold sm:block">
               {siteMetadata.headerTitle}
             </div>
@@ -35,7 +34,7 @@ const Header = () => {
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
         <div className="no-scrollbar hidden max-w-40 items-center space-x-4 overflow-x-auto sm:flex sm:space-x-6 md:max-w-72 lg:max-w-96">
           {headerNavLinks
-            .filter((link) => link.href !== '/')
+            .filter((link) => link.href !== "/")
             .map((link) => (
               <Link
                 key={link.title}
@@ -46,13 +45,13 @@ const Header = () => {
               </Link>
             ))}
         </div>
-        <FormularioAlerta text='presupuesto 👇' className=''/>
+        <FormularioAlerta text="presupuesto 👇" className="" />
         <SearchButton />
         <ThemeSwitch />
         <MobileNav />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

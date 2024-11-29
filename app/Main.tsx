@@ -1,11 +1,11 @@
-import FloatingWhatsAppButton from '@/components/ui/FloatingWhatsAppButton'
-import FormularioAlerta from '@/components/ui/FormularioAlerta'
-import ItemServices from '@/components/ui/ItemServices'
-import FAQSection from '@/components/ui/PreguntasFaq'
-import Services from '@/components/ui/Services'
-import Testimonios from '@/components/ui/Testimonios'
-import siteMetadata from '@/data/siteMetadata'
-import Image from 'next/image'
+import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
+import FormularioAlerta from "@/components/ui/FormularioAlerta";
+import ItemServices from "@/components/ui/ItemServices";
+import FAQSection from "@/components/ui/PreguntasFaq";
+import Services from "@/components/ui/Services";
+import Testimonios from "@/components/ui/Testimonios";
+import siteMetadata from "@/data/siteMetadata";
+import Image from "next/image";
 
 export default function Home({ posts }) {
   return (
@@ -17,10 +17,11 @@ export default function Home({ posts }) {
               {siteMetadata.description}.
             </p>
             <h1 className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-              En ObrasYaBcn nos especializamos en diseñar y reformar ambientes que reflejan tu
-              estilo único. Ya sea que quieras renovar tu hogar, oficina o cualquier otro espacio,
-              nuestro equipo de expertos se encarga de todo: desde la planificación hasta la
-              ejecución, con la garantía de calidad y compromiso 👇
+              En ObrasYaBcn nos especializamos en diseñar y reformar ambientes
+              que reflejan tu estilo único. Ya sea que quieras renovar tu hogar,
+              oficina o cualquier otro espacio, nuestro equipo de expertos se
+              encarga de todo: desde la planificación hasta la ejecución, con la
+              garantía de calidad y compromiso 👇
             </h1>
             <FormularioAlerta text="Presupuesto gratis" />
           </div>
@@ -51,10 +52,10 @@ export default function Home({ posts }) {
         <div className="flex flex-wrap justify-evenly pb-10 pt-20 ">
           <ItemServices />
         </div>
-       <Services /> 
-      <Testimonios /> 
-          <FAQSection /> 
-          <FloatingWhatsAppButton/>
+        <Services />
+        <Testimonios />
+        <FAQSection />
+        <FloatingWhatsAppButton />
       </section>
 
       {/*    {siteMetadata.newsletter?.provider && (
@@ -63,5 +64,5 @@ export default function Home({ posts }) {
         </div>
       )} */}
     </>
-  )
+  );
 }

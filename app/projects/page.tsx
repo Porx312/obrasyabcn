@@ -1,6 +1,6 @@
-import { genPageMetadata } from 'app/seo'
+import { genPageMetadata } from "app/seo";
 
-export const metadata = genPageMetadata({ title: 'Projects' })
+export const metadata = genPageMetadata({ title: "Projects" });
 
 export default function Projects() {
   return (
@@ -15,11 +15,9 @@ export default function Projects() {
           </p>
         </div>
         <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
-         
-          </div>
+          <div className="-m-4 flex flex-wrap"></div>
         </div>
       </div>
     </>
-  )
+  );
 }
