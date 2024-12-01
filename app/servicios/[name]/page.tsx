@@ -4,7 +4,6 @@ import EngagementSection from "@/components/ui/ServicesUi/Engangement";
 import ServicesHeader from "@/components/ui/ServicesUi/ServicesHeader";
 import VentajasSection from "@/components/ui/ServicesUi/VentajasSection";
 import ReformasData from "@/data/ReformasData";
-
 // Define la interfaz para los datos de reforma
 interface ReformaItem {
   name: string;
@@ -18,9 +17,9 @@ interface ReformaItem {
 }
 
 // El componente se ejecuta como función asincrónica
-export default async function Page({ params }: { params: { name: string } }) {
+export default async function Page({ params }: { params: Promise<{ name: string }> }) {
   // Captura el parámetro `name` de la URL
-  const { name } = params;
+  const { name } = await params;
   console.log(name)
   // Busca el item correspondiente en ReformasData
   const item = ReformasData.find((item: ReformaItem) => item.href === name) || null;
