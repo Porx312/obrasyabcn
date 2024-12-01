@@ -127,7 +127,7 @@ const ItemServices = () => {
       >
         {services.slice(0, visibleCount).map(({ Icon, title, href }) => (
           <Link
-            href={`servicios/${href}`}
+            href={`/${href}`}
             key={title}
             className="flex w-[140px] cursor-pointer flex-col items-center justify-center rounded-xl bg-neutral-200 p-4 text-black shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg lg:w-[250px]"
           >

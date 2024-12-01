@@ -1,6 +1,6 @@
 // FloatingWhatsAppButton.tsx
 
-import { MessageCircle } from "lucide-react"; // Icono de WhatsApp de lucide-react
+import { MessageCircle } from 'lucide-react' // Icono de WhatsApp de lucide-react
 
 const FloatingWhatsAppButton = () => {
   return (
@@ -12,7 +12,7 @@ const FloatingWhatsAppButton = () => {
     >
       <MessageCircle size={32} />
     </a>
-  );
-};
+  )
+}
 
-export default FloatingWhatsAppButton;
+export default FloatingWhatsAppButton
