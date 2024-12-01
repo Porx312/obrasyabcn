@@ -2,8 +2,12 @@ import { Link } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import FormularioAlerta from "../FormularioAlerta";
-
-const ServicesHeader = () => {
+interface Props {
+  title: string;
+  description: string;
+  name: string;
+}
+const ServicesHeader = ({ title, description, name }: Props) => {
   return (
     <section className="relative">
       <div className="absolute inset-0 z-0">
@@ -19,18 +23,13 @@ const ServicesHeader = () => {
 
       <div className="relative z-10 pt-16 pb-32 text-white">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4 text-center">
-            ¡Dale Vida y Color a Tu Hogar con las Reformas de Pintura de
-            Reformas Ya Barcelona!
-          </h1>
+          <h1 className="text-4xl font-bold mb-4 text-center">{title}</h1>
           <p className="text-xl mb-8 text-center max-w-3xl mx-auto">
-            ¿Te gustaría que tu hogar tuviera el toque perfecto que siempre
-            soñaste? ¡Hazlo realidad con una reforma de pintura que lo
-            transforme por completo!
+            {description}
           </p>
           <div className="text-center">
             <FormularioAlerta
-              text="Solicitar Reforma de Baño!"
+              text={`Solicitar Reforma de ${name}!`}
               className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
             />
           </div>

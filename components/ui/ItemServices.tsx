@@ -35,6 +35,7 @@ import {
   ThermometerSunIcon,
   RulerIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 /* const services = [
   { Icon: HomeIcon, title: 'Reformas integrales' },
@@ -45,16 +46,21 @@ import {
   { Icon: DropletIcon, title: 'Impermeabilizacion' },
   { Icon: CircuitBoardIcon, title: 'Pladur' },
   { Icon: Paintbrush2Icon, title: 'Pintura' },
-] */
+  ] */
 const services = [
-  { Icon: HomeIcon, title: "Reformas integrales" },
+  { Icon: Paintbrush2Icon, title: "Pintura", href: "reforma-pintura" },
+  {
+    Icon: UtensilsCrossedIcon,
+    title: "Reformas cocinas",
+    href: "reforma-cocina",
+  },
+  /*  { Icon: HomeIcon, title: "Reformas integrales" },
   { Icon: ShowerHeadIcon, title: "Reformas de baños" },
   { Icon: HammerIcon, title: "Carpintería" },
   { Icon: Plug2Icon, title: "Instalaciones eléctricas" },
   { Icon: PipetteIcon, title: "Fontanería" },
   { Icon: DropletIcon, title: "Impermeabilización" },
   { Icon: CircuitBoardIcon, title: "Pladur" },
-  { Icon: Paintbrush2Icon, title: "Pintura" },
   { Icon: WrenchIcon, title: "Aladores" },
   { Icon: SunIcon, title: "Placas solares" },
   { Icon: WindIcon, title: "Aire acondicionado" },
@@ -64,7 +70,6 @@ const services = [
   { Icon: UmbrellaIcon, title: "Toldos" },
   { Icon: BuildingIcon, title: "Reformas" },
   { Icon: ShowerHeadIcon, title: "Reformas baños" },
-  { Icon: UtensilsCrossedIcon, title: "Reformas cocinas" },
   { Icon: HomeIcon, title: "Reformas viviendas" },
   { Icon: BriefcaseIcon, title: "Reformas oficinas" },
   { Icon: LandmarkIcon, title: "Rehabilitación fachadas" },
@@ -84,7 +89,7 @@ const services = [
   { Icon: BugIcon, title: "Control plagas" },
   { Icon: ThermometerSunIcon, title: "Calefacción" },
   { Icon: RulerIcon, title: "Arquitectos" },
-  { Icon: MoreHorizontalIcon, title: "Otros trabajos" },
+  { Icon: MoreHorizontalIcon, title: "Otros trabajos" }, */
 ];
 
 const ItemServices = () => {
@@ -106,7 +111,7 @@ const ItemServices = () => {
   };
 
   return (
-    <div className="flex w-full flex-col gap-2 p-4" ref={containerRef}>
+    <div className="flex w-full   my-6 p-10  flex-col gap-2" ref={containerRef}>
       <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl">
         ¿Te apetece algún servicio en específico?
       </h2>
@@ -116,24 +121,25 @@ const ItemServices = () => {
       </p>
       {/* Lista de servicios */}
       <ul
-        className={`m-1 flex flex-wrap justify-between gap-4 transition-all duration-300 ${
+        className={`m-1 flex flex-wrap justify-evenly gap-4 transition-all duration-300 ${
           visibleCount === services.length ? "max-h-[3000px]" : "max-h-[500px]"
         }`}
       >
-        {services.slice(0, visibleCount).map(({ Icon, title }) => (
-          <li
+        {services.slice(0, visibleCount).map(({ Icon, title, href }) => (
+          <Link
+            href={`servicios/${href}`}
             key={title}
             className="flex w-[140px] cursor-pointer flex-col items-center justify-center rounded-xl bg-neutral-200 p-4 text-black shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg lg:w-[250px]"
           >
             {Icon ? <Icon /> : <span>No Icon Available</span>}
             <span className="text-center font-semibold">{title}</span>
-          </li>
+          </Link>
         ))}
       </ul>
       {/* Botón de alternar */}
       <button
         onClick={toggleVisibility}
-        className="flex bg-slate-50 hover:scale-105 transition-all self-center mt-2 p-2 w-[200px] items-center justify-center rounded-lg"
+        className="flex bg-slate-50 hover:scale-105 transition-all self-center mt-2 p-2 w-[200px] text-black items-center justify-center rounded-lg"
       >
         {visibleCount === 8 ? "Ver más Servicios" : "Ver menos Servicios"}
       </button>

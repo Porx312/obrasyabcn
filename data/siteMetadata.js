@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: "obras ya barcelona",
+  title: "ObrasYaBcn",
   author: "ObrasYaBcn",
   headerTitle: "OBrasYaBcn",
   description:

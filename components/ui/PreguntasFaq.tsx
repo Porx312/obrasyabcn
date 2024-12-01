@@ -40,7 +40,7 @@ const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-200">
+    <div className="border-b w-full  border-gray-200">
       <button
         className="flex w-full items-center justify-between py-5 text-left"
         onClick={() => setIsOpen(!isOpen)}

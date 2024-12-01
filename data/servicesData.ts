@@ -1,36 +1,27 @@
 interface Services {
   title: string;
   description: string;
-  href?: string;
   imgSrc?: string;
 }
 
 const servicesData: Services[] = [
   {
     title: "Reformas Integrales",
-    description: `¿Qué tal si pudieras buscar cualquier información en el mundo? Páginas web, imágenes, videos
-      y más. Google tiene muchas características para ayudarte a encontrar exactamente lo que estás buscando
-      for.`,
-    imgSrc: "/static/images/reformas/reformas1.jpg",
-    href: "https://www.google.com",
-  },
-  {
-    title: "The Time Machine",
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-      to the desired date and press "Go". No more worrying about lost keys or
-      forgotten headphones with this simple yet affordable solution.`,
+    description:
+      "Transformamos completamente tu espacio con soluciones personalizadas y de alta calidad.",
     imgSrc: "/static/images/reformas/reformas2.jpg",
-
-    href: "/blog/the-time-machine",
   },
   {
-    title: "The Time Machine",
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-        to the desired date and press "Go". No more worrying about lost keys or
-        forgotten headphones with this simple yet affordable solution.`,
+    title: "Cocinas Modernas",
+    description:
+      "Diseñamos y renovamos cocinas funcionales y estéticamente atractivas para tu hogar.",
+    imgSrc: "/static/images/reformas/reformas1.jpg",
+  },
+  {
+    title: "Baños de Lujo",
+    description:
+      "Creamos espacios de baño elegantes y relajantes con los mejores materiales y acabados.",
     imgSrc: "/static/images/reformas/reformas3.jpg",
-
-    href: "/blog/the-time-machine",
   },
 ];
 

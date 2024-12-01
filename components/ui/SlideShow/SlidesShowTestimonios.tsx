@@ -14,7 +14,7 @@ import reviewsData from "@/data/Reviews";
 
 export default function SlidesShowTestimonios() {
   return (
-    <div className=" h-[300px] w-full overflow-hidden rounded-lg lg:w-[500px]">
+    <div className=" h-[300px]  w-full   overflow-hidden  rounded-lg lg:w-[500px]">
       <Swiper
         style={
           {
@@ -30,12 +30,12 @@ export default function SlidesShowTestimonios() {
           clickable: true,
         }}
         modules={[FreeMode, Autoplay, Pagination]}
-        className="mySwiper2"
+        className="mySwiper2 "
       >
         {reviewsData.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="relative flex cursor-pointer items-center"
+            className="relative flex   cursor-pointer items-center "
           >
             <ReviewCard
               avatarUrl={item.avatarUrl}

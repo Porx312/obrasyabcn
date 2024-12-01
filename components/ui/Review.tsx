@@ -17,7 +17,7 @@ export default function ReviewCard({
   comment,
 }: ReviewCardProps) {
   return (
-    <div className="w-full max-w-sm rounded-lg bg-white p-6 shadow-md transition-all duration-300 hover:shadow-lg">
+    <div className="w-full max-w-sm rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-lg">
       <div className="flex items-center gap-4 mb-4">
         <div className="relative h-12 w-12 overflow-hidden rounded-full">
           <Image

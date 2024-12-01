@@ -1,6 +1,5 @@
 import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
 import FormularioAlerta from "@/components/ui/FormularioAlerta";
-import HeroSection from "@/components/ui/HeroSection";
 import ItemServices from "@/components/ui/ItemServices";
 import FAQSection from "@/components/ui/PreguntasFaq";
 import Services from "@/components/ui/Services";
@@ -11,8 +10,8 @@ import Image from "next/image";
 export default function Home({ posts }) {
   return (
     <>
-      <section className=" flex flex-col justify-center items-center ">
-        <article className=" flex flex-col items-center justify-between w-full lg:flex-row ">
+      <section className=" flex  flex-col justify-center items-center ">
+        <article className=" flex p-10  flex-col items-center justify-between w-full lg:flex-row ">
           <div className="max-w-[700px] space-y-2 pb-8 pt-3  md:space-y-5">
             <p className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl">
               {siteMetadata.description}.
@@ -48,12 +47,12 @@ export default function Home({ posts }) {
               height={200}
               alt="Picture"
             />
-            <div className="absolute left-6 -top-4 rounded-lg bg-blue-500 hover:scale-110 translate-x-4 transition-all p-4 shadow-lg">
+            {/*    <div className="absolute left-6 -top-4 rounded-lg bg-blue-500 hover:scale-110 translate-x-4 transition-all p-4 shadow-lg">
               <FormularioAlerta
                 text="🚀 ¡Transforma tu hogar hoy! 🛠️"
                 className="text-base font-bold text-white"
               ></FormularioAlerta>
-            </div>
+            </div> */}
           </div>
         </article>
         <div className="flex flex-wrap justify-evenly pb-10 pt-20 ">

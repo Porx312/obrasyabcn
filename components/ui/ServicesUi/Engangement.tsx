@@ -32,14 +32,14 @@ export default function EngagementSection() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-100">
+    <section className="py-16 bg-gradient-to-b">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6 text-gray-800">
+            <h2 className="text-4xl font-bold mb-6">
               ¿Por Qué Elegir Reformas Ya Barcelona?
             </h2>
-            <p className="text-xl mb-8 text-gray-600">
+            <p className="text-xl mb-8">
               Porque entendemos lo que quieres, y lo hacemos realidad.
             </p>
             <ul className="space-y-4">
@@ -50,12 +50,12 @@ export default function EngagementSection() {
               ].map((item, index) => (
                 <li key={index} className="flex items-center space-x-3">
                   <Check className="flex-shrink-0 h-6 w-6 text-yellow-500" />
-                  <span className="text-gray-700">{item}</span>
+                  <span className="">{item}</span>
                 </li>
               ))}
             </ul>
             <div className="mt-12">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+              <h3 className="text-2xl font-semibold mb-4">
                 Lo que dicen nuestros clientes
               </h3>
               <div className="bg-white p-6 rounded-lg shadow-lg">
