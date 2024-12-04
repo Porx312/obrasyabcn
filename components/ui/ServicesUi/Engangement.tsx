@@ -30,9 +30,8 @@ const testimonials: Testimonial[] = [
 ];
 interface Props {
   name: string;
-  data: string[];
 }
-export default function EngagementSection({ name, data }: Props) {
+export default function EngagementSection({ name }: Props) {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
