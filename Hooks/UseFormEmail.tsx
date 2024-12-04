@@ -2,6 +2,7 @@
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 interface FormData {
   email: string;
@@ -27,7 +28,6 @@ const UseFormEmail = () => {
 
   const onSubmit = async (data: FormData) => {
     setFormStatus("loading"); // Set loading status while sending
-    // Log environment variables to check if they are being loaded correctly
     try {
       // Send the form data with EmailJS
       const response = await emailjs.send(
@@ -44,15 +44,31 @@ const UseFormEmail = () => {
         process.env.NEXT_PUBLIC_EMAILSJS_PUBLIC_KEY || "", // Ensure the public key is defined
       );
 
+      // Display success message using SweetAlert2
+      Swal.fire({
+        title: "¡Formulario enviado!",
+        text: "Tu solicitud ha sido enviada correctamente. Nos pondremos en contacto contigo pronto.",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+      });
+
       console.log("Formulario enviado con éxito", response.text);
-      setFormStatus("success"); // Success message
+      setFormStatus("success"); // Update form status to success
 
       reset(); // Reset the form after submission
       closeModal(); // Close the modal
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error al enviar el formulario:", error);
-      setFormStatus("error"); // Error message
-      alert("Error al enviar el formulario: " + error.message);
+
+      // Display error message using SweetAlert2
+      Swal.fire({
+        title: "Error",
+        text: `No se pudo enviar el formulario. Por favor, inténtalo nuevamente. ${error.message}`,
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+
+      setFormStatus("error"); // Update form status to error
     }
   };
 

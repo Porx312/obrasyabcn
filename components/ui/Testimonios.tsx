@@ -2,7 +2,7 @@ import SlidesShowTestimonios from "./SlideShow/SlidesShowTestimonios";
 
 const Testimonios = () => {
   return (
-    <article className="flex flex-col-reverse p-10 my-6 w-full items-center justify-between gap-6 pt-10 lg:flex-row">
+    <article className="flex flex-col-reverse my-6 w-full items-center justify-between gap-6 pt-10 lg:flex-row">
       <SlidesShowTestimonios />
       <div className="flex flex-col gap-4 lg:w-[600px]">
         <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-orange-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-2xl">

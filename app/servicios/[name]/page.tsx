@@ -17,12 +17,17 @@ interface ReformaItem {
 }
 
 // El componente se ejecuta como función asincrónica
-export default async function Page({ params }: { params: Promise<{ name: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ name: string }>;
+}) {
   // Captura el parámetro `name` de la URL
   const { name } = await params;
-  console.log(name)
+  console.log(name);
   // Busca el item correspondiente en ReformasData
-  const item = ReformasData.find((item: ReformaItem) => item.href === name) || null;
+  const item =
+    ReformasData.find((item: ReformaItem) => item.href === name) || null;
 
   // Renderiza el contenido o muestra un mensaje de error si no hay coincidencias
   if (!item) {
@@ -40,10 +45,16 @@ export default async function Page({ params }: { params: Promise<{ name: string 
         name={item.name}
         description={item.description}
         title={item.title}
+        img={item.img}
       />
-      <DoForYou icons={item.doforyour.icons} title={item.doforyour.title} />
+      <DoForYou
+        icons={item.doforyour.icons}
+        title={item.doforyour.title}
+        name={item.name}
+        img={item.img}
+      />
       <VentajasSection />
-      <EngagementSection />
+      <EngagementSection name={item.name} />
       <FloatingWhatsAppButton />
     </>
   );

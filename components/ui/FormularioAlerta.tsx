@@ -5,20 +5,22 @@ import ReactModal from "react-modal";
 
 const servicios = [
   "Reforma integral",
-  "Reforma de baño",
-  "Reforma de cocina",
+  "Reforma de Baño",
+  "Reforma de Cocina",
   "Pintura",
   "Electricidad",
   "Fontanería",
 ];
 interface FormularioAlertaProps {
   className?: string;
-  text: string; // `?` makes it optional
+  text: string;
+  reforma?: string; // `?` makes it optional
 }
 
 export default function FormularioAlerta({
   className,
   text,
+  reforma,
 }: FormularioAlertaProps) {
   const {
     handleSubmit,
@@ -31,7 +33,6 @@ export default function FormularioAlerta({
     formStatus,
   } = UseFormEmail();
   // Función para manejar el cierre del modal
-
   // Función para manejar el envío del formulario
 
   return (
@@ -112,6 +113,7 @@ export default function FormularioAlerta({
               id="servicio"
               {...register("servicio", { required: "Selecciona un servicio" })}
               className="w-full text-black rounded-md border px-3 py-2"
+              defaultValue={reforma || ""}
             >
               <option value="">Seleccione un servicio</option>
               {servicios.map((servicio) => (

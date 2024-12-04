@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Star, Check, Phone, Calendar } from "lucide-react";
 import FormularioAlerta from "../FormularioAlerta";
+import { ServicesSlider } from "../SlideShow/ServicerSlider";
 
 interface Testimonial {
   name: string;
@@ -27,8 +28,11 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
 ];
-
-export default function EngagementSection() {
+interface Props {
+  name: string;
+  data: string[];
+}
+export default function EngagementSection({ name, data }: Props) {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
@@ -44,9 +48,9 @@ export default function EngagementSection() {
             </p>
             <ul className="space-y-4">
               {[
-                "Más de 15 años de experiencia",
-                "Calidad Garantizada",
-                "Asesoramiento Personalizado",
+                "Más de 15 años de experiencia que respaldan nuestro compromiso y excelencia",
+                "Resultados de calidad garantizada, diseñados para superar tus expectativas",
+                "Asesoramiento personalizado para hacer realidad tus ideas y proyectos únicos",
               ].map((item, index) => (
                 <li key={index} className="flex items-center space-x-3">
                   <Check className="flex-shrink-0 h-6 w-6 text-yellow-500" />
@@ -54,6 +58,7 @@ export default function EngagementSection() {
                 </li>
               ))}
             </ul>
+
             <div className="mt-12">
               <h3 className="text-2xl font-semibold mb-4">
                 Lo que dicen nuestros clientes
@@ -87,19 +92,6 @@ export default function EngagementSection() {
             </div>
           </div>
           <div className="space-y-8">
-            <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="https://res.cloudinary.com/dq0pfesxe/image/upload/v1732883130/rexn3klewfnucdfzxbyz.jpg"
-                alt="Antes y después de una reforma de pintura"
-                layout="fill"
-                objectFit="cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <p className="text-white text-2xl font-bold text-center px-4">
-                  Antes y Después
-                </p>
-              </div>
-            </div>
             <div className="bg-yellow-500 p-8 rounded-lg shadow-lg">
               <h2 className="text-3xl font-bold mb-4 text-white">
                 ¡Hazlo Realidad Hoy!
@@ -125,6 +117,7 @@ export default function EngagementSection() {
                 </div>
               </div>
               <FormularioAlerta
+                reforma={name}
                 text="Pide Tu Presupuesto gratis"
                 className="mt-6 bg-white text-yellow-500 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300"
               ></FormularioAlerta>

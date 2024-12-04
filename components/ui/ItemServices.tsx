@@ -34,6 +34,7 @@ import {
   BugIcon,
   ThermometerSunIcon,
   RulerIcon,
+  Icon,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -54,8 +55,8 @@ const services = [
     title: "Reformas cocinas",
     href: "reforma-cocina",
   },
+  { Icon: ShowerHeadIcon, title: "Reformas de baños", href: "reforma-banos" },
   /*  { Icon: HomeIcon, title: "Reformas integrales" },
-  { Icon: ShowerHeadIcon, title: "Reformas de baños" },
   { Icon: HammerIcon, title: "Carpintería" },
   { Icon: Plug2Icon, title: "Instalaciones eléctricas" },
   { Icon: PipetteIcon, title: "Fontanería" },
@@ -111,7 +112,7 @@ const ItemServices = () => {
   };
 
   return (
-    <div className="flex w-full   my-6 p-10  flex-col gap-2" ref={containerRef}>
+    <div className="flex w-full   my-6  flex-col gap-2" ref={containerRef}>
       <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl">
         ¿Te apetece algún servicio en específico?
       </h2>

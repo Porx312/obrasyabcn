@@ -1,11 +1,10 @@
 import servicesData from "@/data/servicesData";
 import FormularioAlerta from "./FormularioAlerta";
 import { ServicesSlider } from "./SlideShow/ServicerSlider";
-import ServicesSlideShow from "./SlideShow/ServicesSlideshow";
 
 const Services = () => {
   return (
-    <article className="flex flex-col w-full items-center justify-between gap-6 p-10 lg:flex-row">
+    <article className="flex flex-col w-full items-center justify-between gap-6  lg:flex-row">
       <div className="flex w-full min-w-[350px] flex-col gap-4">
         <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl">
           En Obras Ya Barcelona, ¡nos enfocamos en hacer realidad tus sueños!

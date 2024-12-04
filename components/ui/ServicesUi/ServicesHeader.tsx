@@ -6,18 +6,13 @@ interface Props {
   title: string;
   description: string;
   name: string;
+  img: string;
 }
-const ServicesHeader = ({ title, description, name }: Props) => {
+const ServicesHeader = ({ title, description, name, img }: Props) => {
   return (
     <section className="relative">
       <div className="absolute inset-0 z-0">
-        <Image
-          src="https://res.cloudinary.com/dq0pfesxe/image/upload/v1732883130/rexn3klewfnucdfzxbyz.jpg"
-          alt="Reforma de pintura"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
+        <Image src={img} alt={name} layout="fill" objectFit="cover" priority />
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
 
@@ -31,6 +26,7 @@ const ServicesHeader = ({ title, description, name }: Props) => {
             <FormularioAlerta
               text={`Solicitar Reforma de ${name}!`}
               className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
+              reforma={name}
             />
           </div>
         </div>

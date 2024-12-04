@@ -11,7 +11,7 @@ export default function Home({ posts }) {
   return (
     <>
       <section className=" flex  flex-col justify-center items-center ">
-        <article className=" flex p-10  flex-col items-center justify-between w-full lg:flex-row ">
+        <article className=" flex  flex-col items-center justify-between w-full lg:flex-row ">
           <div className="max-w-[700px] space-y-2 pb-8 pt-3  md:space-y-5">
             <p className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl">
               {siteMetadata.description}.

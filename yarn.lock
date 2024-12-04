@@ -9217,6 +9217,13 @@ react@rc:
   languageName: node
   linkType: hard
 
+"sweetalert2@npm:^11.14.5":
+  version: 11.14.5
+  resolution: "sweetalert2@npm:11.14.5"
+  checksum: 6c7f37120f6d5143214279a50c3b6db244222b0b4ba14751ef03e4678e5020e8ea42f0019c0719d6753883bf283b3a3bf2dc00fc62dd37e63c8f31f8041b7978
+  languageName: node
+  linkType: hard
+
 "swiper@npm:^11.1.15":
   version: 11.1.15
   resolution: "swiper@npm:11.1.15"
@@ -9285,6 +9292,7 @@ react@rc:
     remark-gfm: ^4.0.0
     remark-github-blockquote-alert: ^1.2.1
     remark-math: ^6.0.0
+    sweetalert2: ^11.14.5
     swiper: ^11.1.15
     tailwindcss: ^3.4.14
     typescript: ^5.1.3

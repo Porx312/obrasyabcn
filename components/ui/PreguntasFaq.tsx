@@ -63,7 +63,7 @@ const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {
 
 export default function FAQSection() {
   return (
-    <section className="mx-auto w-full max-w-3xl px-4 py-12">
+    <section className="mx-auto w-full max-w-3xl px-4 ">
       <h2 className="mb-8 text-center text-4xl font-bold">
         Resolvemos tus dudas
       </h2>

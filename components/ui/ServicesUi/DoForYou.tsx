@@ -3,8 +3,10 @@ import FormularioAlerta from "../FormularioAlerta";
 interface Props {
   title: string;
   icons: { icon: React.ElementType; text: string }[];
+  name: string;
+  img: string;
 }
-export default function DoForYou({ title, icons }: Props) {
+export default function DoForYou({ title, icons, name, img }: Props) {
   return (
     <section className="py-16 bg ">
       <div className="container mx-auto px-4">
@@ -26,6 +28,7 @@ export default function DoForYou({ title, icons }: Props) {
             </ul>
             <div className="mt-8">
               <FormularioAlerta
+                reforma={name}
                 text="Solicita Tu Presupuesto gratis"
                 className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
               ></FormularioAlerta>
@@ -33,8 +36,8 @@ export default function DoForYou({ title, icons }: Props) {
           </div>
           <div className="relative h-96 md:h-full">
             <Image
-              src="https://res.cloudinary.com/dq0pfesxe/image/upload/v1732883130/rexn3klewfnucdfzxbyz.jpg"
-              alt="Pintura profesional en acción"
+              src={img}
+              alt={name}
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-xl"

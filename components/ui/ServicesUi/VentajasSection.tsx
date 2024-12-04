@@ -7,31 +7,30 @@ interface Ventaja {
   title: string;
   description: string;
 }
-
 const ventajas: Ventaja[] = [
   {
     icon: Clock,
-    title: "Transformación Rápida y Económica",
+    title: "Renovación Rápida y Accesible",
     description:
-      "Reformar con pintura es una de las formas más efectivas de renovar tu hogar. ¡En pocos días, tu casa estará como nueva sin romper el banco!",
+      "Transforma tu espacio en tiempo récord y con una inversión que se adapta a tu presupuesto. Nuestro enfoque eficiente asegura que disfrutes de tu reforma sin complicaciones.",
   },
   {
     icon: TrendingUp,
-    title: "Aumenta el Valor de tu Propiedad",
+    title: "Mejora el Valor de tu Hogar",
     description:
-      "Una capa de pintura de calidad no solo mejora el aspecto de tu hogar, sino que también aumenta su valor. ¡Es una inversión inteligente para el presente y el futuro!",
+      "Cada reforma que hacemos no solo embellece tu espacio, sino que aumenta su valor. Invertir en calidad hoy garantiza un hogar más atractivo y rentable mañana.",
   },
   {
     icon: Home,
-    title: "Espacios más Cálidos, Modernos y Cómodos",
+    title: "Espacios que Inspiran Bienestar",
     description:
-      "Queremos que cada habitación de tu casa no solo se vea bien, sino que también se sienta acogedora. Con nuestras pinturas, cada espacio tendrá la atmósfera perfecta para que te sientas a gusto.",
+      "Tu hogar merece ser un reflejo de confort y estilo. Creamos ambientes cálidos y funcionales donde cada detalle está diseñado para hacerte sentir en casa.",
   },
   {
     icon: Palette,
-    title: "Diseños Únicos y a Tu Medida",
+    title: "Diseños Exclusivos y Personalizados",
     description:
-      "No nos conformamos con lo común. Cada pared es un lienzo en blanco donde puedes expresar tu personalidad. ¡Nada de soluciones de catálogo! Creamos un ambiente único que se ajusta a ti.",
+      "Nos apasiona convertir tus ideas en realidad. Cada reforma es única, adaptada a tus gustos y necesidades para que cada rincón sea una extensión de tu personalidad.",
   },
 ];
 

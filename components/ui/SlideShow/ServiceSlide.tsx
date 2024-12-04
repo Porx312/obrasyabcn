@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 interface ServiceSlideProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   imgSrc: string;
 }
 
@@ -29,9 +29,13 @@ export function ServiceSlide({
         <p className="mb-4 text-sm leading-relaxed sm:text-base md:text-lg">
           {description}
         </p>
-        <button className="self-start rounded bg-white px-4 py-2 text-sm font-semibold text-black transition-colors duration-300 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-          Leer más
-        </button>
+        {title === "" ? (
+          ""
+        ) : (
+          <button className="self-start rounded bg-white px-4 py-2 text-sm font-semibold text-black transition-colors duration-300 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            Leer más
+          </button>
+        )}
       </div>
     </div>
   );
