@@ -24,7 +24,7 @@ const ServicesHeader = ({ title, description, name, img }: Props) => {
           </p>
           <div className="text-center">
             <FormularioAlerta
-              text={`Solicitar Reforma de ${name}!`}
+              text={`Solicitar ${name}!`}
               className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
               reforma={name}
             />

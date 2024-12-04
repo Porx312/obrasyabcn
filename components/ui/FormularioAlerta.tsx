@@ -4,7 +4,7 @@ import UseFormEmail from "Hooks/UseFormEmail";
 import ReactModal from "react-modal";
 
 const servicios = [
-  "Reforma integral",
+ "Reforma Integral",
   "Reforma de Baño",
   "Reforma de Cocina",
   "Pintura",

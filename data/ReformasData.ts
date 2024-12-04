@@ -104,6 +104,28 @@ const ReformasData: ServicesReformas[] = [
     href: "reforma-banos",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1732883130/rexn3klewfnucdfzxbyz.jpg",
   },
+  {
+    name: "Reforma Integral",
+    title: "¡Transforma tu Hogar con Reformas Integrales de Calidad con Reformas Ya Barcelona!",
+    description:
+      "¿Quieres darle una nueva vida a tu hogar? Reformas Ya Barcelona te ofrece reformas integrales adaptadas a tus necesidades, combinando funcionalidad, estética y calidad en cada rincón de tu casa.",
+    doforyour: {
+      title: "Lo Que Hacemos por Ti",
+      icons: [
+        { icon: Icons.Home, text: "Proyectos Personalizados para Cada Espacio" },
+        { icon: Icons.Droplet, text: "Soluciones Innovadoras y Sostenibles" },
+        { icon: Icons.Layers, text: "Materiales de Alta Gama y Larga Durabilidad" },
+        { icon: Icons.Lightbulb, text: "Diseño de Interiores que Inspira" },
+        {
+          icon: Icons.CheckCircle,
+          text: "Acabados Impecables para un Toque de Distinción",
+        },
+      ],
+    },
+    href: "reforma-integral",
+    img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733319801/fn7px9zicbna4mwqhm6z.jpg",
+  }
+  
 ];
 
 export default ReformasData;

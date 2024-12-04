@@ -56,8 +56,8 @@ const services = [
     href: "reforma-cocina",
   },
   { Icon: ShowerHeadIcon, title: "Reformas de baños", href: "reforma-banos" },
-  /*  { Icon: HomeIcon, title: "Reformas integrales" },
-  { Icon: HammerIcon, title: "Carpintería" },
+    { Icon: HomeIcon, title: "Reformas integrales", href: "reforma-integral"}
+  /*{ Icon: HammerIcon, title: "Carpintería" },
   { Icon: Plug2Icon, title: "Instalaciones eléctricas" },
   { Icon: PipetteIcon, title: "Fontanería" },
   { Icon: DropletIcon, title: "Impermeabilización" },
