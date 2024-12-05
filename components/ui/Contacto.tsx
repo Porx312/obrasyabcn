@@ -108,27 +108,7 @@ export default function ContactoReformas() {
         </div>
 
         {/* Código Postal */}
-        <div>
-          <label
-            htmlFor="codigoPostal"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Código Postal:
-          </label>
-          <input
-            id="codigoPostal"
-            type="text"
-            {...register("codigoPostal", {
-              required: "Código Postal es obligatorio",
-            })}
-            className="w-full rounded-md border text-black px-3 py-2"
-          />
-          {errors.codigoPostal && (
-            <span className="text-sm text-red-500">
-              {errors.codigoPostal.message}
-            </span>
-          )}
-        </div>
+       
 
         {/* Comentarios */}
         <div>
