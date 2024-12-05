@@ -1,3 +1,4 @@
+import ComoTrabajamos from "@/components/ui/ComoTrabajamos";
 import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
 import FormularioAlerta from "@/components/ui/FormularioAlerta";
 import ItemServices from "@/components/ui/ItemServices";
@@ -55,9 +56,11 @@ export default function Home({ posts }) {
             </div> */}
           </div>
         </article>
+        <ComoTrabajamos/>
         <div className="flex flex-wrap justify-evenly pb-10 pt-20 ">
           <ItemServices />
         </div>
+        
         <Services />
         <Testimonios />
         <FAQSection />
