@@ -6,7 +6,6 @@ import MobileNav from "./MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
 import SearchButton from "./SearchButton";
 import FormularioAlerta from "./ui/FormularioAlerta";
-import FloatingWhatsAppButton from "./ui/FloatingWhatsAppButton";
 
 const Header = () => {
   let headerClass =

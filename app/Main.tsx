@@ -1,6 +1,7 @@
+import LocationMap from "@/components/LocationMap";
 import ComoTrabajamos from "@/components/ui/ComoTrabajamos";
+import FormularioReforma from "@/components/ui/Contacto/FormularioReforma";
 import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
-import FormularioAlerta from "@/components/ui/FormularioAlerta";
 import ItemServices from "@/components/ui/ItemServices";
 import FAQSection from "@/components/ui/PreguntasFaq";
 import Services from "@/components/ui/Services";
@@ -24,9 +25,9 @@ export default function Home({ posts }) {
               encarga de todo: desde la planificación hasta la ejecución, con la
               garantía de calidad y compromiso 👇
             </h1>
-            <FormularioAlerta text="Presupuesto gratis" />
+            <FormularioReforma />
           </div>
-          <div className="relative h-[300px] w-[350px] lg:w-[450px] ">
+          <div className="relative h-[300px] w-full lg:w-[500px]    ">
             <Image
               className="absolute left-16 top-8 rounded-xl"
               src="/static/images/reformas/reformas3.jpg"
@@ -42,27 +43,22 @@ export default function Home({ posts }) {
               alt="Picture"
             />
             <Image
-              className="absolute bottom-2 right-1 rounded-xl"
+              className="absolute bottom-1 right-20 rounded-xl"
               src="/static/images/reformas/reformas1.jpg"
               width={200}
               height={200}
               alt="Picture"
             />
-            {/*    <div className="absolute left-6 -top-4 rounded-lg bg-blue-500 hover:scale-110 translate-x-4 transition-all p-4 shadow-lg">
-              <FormularioAlerta
-                text="🚀 ¡Transforma tu hogar hoy! 🛠️"
-                className="text-base font-bold text-white"
-              ></FormularioAlerta>
-            </div> */}
           </div>
         </article>
-        <ComoTrabajamos/>
+        <ComoTrabajamos />
         <div className="flex flex-wrap justify-evenly pb-10 pt-20 ">
           <ItemServices />
         </div>
-        
+
         <Services />
         <Testimonios />
+        {/*    <LocationMap/> */}
         <FAQSection />
         <FloatingWhatsAppButton />
       </section>

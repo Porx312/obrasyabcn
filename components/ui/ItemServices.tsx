@@ -57,10 +57,10 @@ const services = [
   },
   { Icon: ShowerHeadIcon, title: "Reformas de baños", href: "reforma-banos" },
   { Icon: HomeIcon, title: "Reformas integrales", href: "reforma-integral" },
-  { Icon: CircuitBoardIcon, title: "Pladur",   href: "reforma-pladur" },
-  { Icon: PipetteIcon, title: "Fontanería",  href: "reforma-fontaneria" },
+  { Icon: CircuitBoardIcon, title: "Pladur", href: "reforma-pladur" },
+  { Icon: PipetteIcon, title: "Fontanería", href: "reforma-fontaneria" },
   { Icon: BriefcaseIcon, title: "Reformas oficinas", href: "reforma-oficinas" },
-  { Icon: LayersIcon, title: "Obras menores",   href: "obras-menores" },
+  { Icon: LayersIcon, title: "Obras menores", href: "obras-menores" },
   /*{ Icon: HammerIcon, title: "Carpintería" },
   { Icon: Plug2Icon, title: "Instalaciones eléctricas" },
   { Icon: DropletIcon, title: "Impermeabilización" },
@@ -117,8 +117,8 @@ const ItemServices = () => {
         ¿Te apetece algún servicio en específico?
       </h2>
       <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        Selecciona uno de nuestros servicios y lo mejor es que el presupuesto es
-        gratis!
+        Selecciona uno de nuestros servicios y lo mejor es que el{" "}
+        <span className="text-orange-500">presupuesto es gratis!</span>
       </p>
       {/* Lista de servicios */}
       <ul

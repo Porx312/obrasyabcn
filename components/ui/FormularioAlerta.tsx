@@ -5,14 +5,14 @@ import { Calculator } from "lucide-react";
 import ReactModal from "react-modal";
 
 const servicios = [
- "Reforma Integral",
+  "Reforma Integral",
   "Reforma de Baño",
   "Reforma de Cocina",
   "Pintura",
-  "Pladur", 
+  "Pladur",
   "Fontanería",
   "Reforma de Oficinas",
-  "Obras Menores"
+  "Obras Menores",
 ];
 interface FormularioAlertaProps {
   className?: string;
@@ -42,16 +42,18 @@ export default function FormularioAlerta({
     <div>
       {/* Botón para abrir el modal */}
       <button
-      onClick={()=> setIsOpen(true)}
-      className={className ? className : "group relative overflow-hidden rounded-lg bg-gradient-to-r from-yellow-500 to-orange-600 px-4 py-3 text-lg font-bold text-white shadow-md transition-all duration-300 hover:from-yellow-600 hover:to-orange-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"}
-    >
-      <span className="relative z-10 uppercase tracking-wider">
-        {text}
-      </span>
-      <span className="absolute inset-0 z-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      <span className="absolute bottom-0 left-0 h-1 w-full bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
-    </button>
-    
+        onClick={() => setIsOpen(true)}
+        className={
+          className
+            ? className
+            : "group relative overflow-hidden rounded-lg bg-gradient-to-r from-yellow-600 to-orange-600 px-4 py-2 text-lg font-bold text-white shadow-md transition-all duration-300 hover:from-yellow-600 hover:to-orange-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
+        }
+      >
+        <span className="relative z-10 uppercase tracking-wider">{text}</span>
+        <span className="absolute inset-0 z-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <span className="absolute bottom-0 left-0 h-1 w-full bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
+      </button>
+
       {/* Modal con el formulario */}
       <ReactModal
         isOpen={isOpen}
@@ -158,7 +160,6 @@ export default function FormularioAlerta({
           </div>
 
           {/* Código Postal */}
-        
 
           {/* Comentarios */}
           <div>

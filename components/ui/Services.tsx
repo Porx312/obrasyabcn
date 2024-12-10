@@ -12,19 +12,20 @@ const Services = () => {
         <p className="text-lg leading-7 text-gray-600 dark:text-gray-400">
           Desde reformas integrales hasta renovaciones específicas, nuestro
           equipo se dedica a transformar espacios con pasión y profesionalismo.
-          <strong className="text-blue-600">
+          <strong className="text-orange-500">
             {" "}
             Tu proyecto es nuestra prioridad.{" "}
           </strong>
           ¡Creamos ambientes únicos, modernos y funcionales, diseñados a la
           medida de tus necesidades!
         </p>
-        <FormularioAlerta text="¿Listo para transformar tu espacio?" />
+        <FormularioAlerta text="Empezamos?" />
       </div>
       <div className="flex w-full flex-wrap items-center justify-end gap-4">
         <ServicesSlider services={servicesData} />
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          Más de 10 años de experiencia nos respaldan. ¡Déjanos inspirarte!
+          <span className="text-orange-500">Más de 15 años</span> de experiencia
+          nos respaldan. ¡Déjanos inspirarte!
         </p>
       </div>
     </article>

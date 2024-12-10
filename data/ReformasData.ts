@@ -22,7 +22,7 @@ const Icons = {
   Layers,
   Lightbulb,
   Plug,
-  Wrench
+  Wrench,
 };
 
 // Definimos la interfaz que estructura la información de los servicios de reformas.
@@ -110,15 +110,22 @@ const ReformasData: ServicesReformas[] = [
   },
   {
     name: "Reforma Integral",
-    title: "¡Transforma tu Hogar con Reformas Integrales de Calidad con Reformas Ya Barcelona!",
+    title:
+      "¡Transforma tu Hogar con Reformas Integrales de Calidad con Reformas Ya Barcelona!",
     description:
       "¿Quieres darle una nueva vida a tu hogar? Reformas Ya Barcelona te ofrece reformas integrales adaptadas a tus necesidades, combinando funcionalidad, estética y calidad en cada rincón de tu casa.",
     doforyour: {
       title: "¡Rediseñamos tu Hogar de Arriba a Abajo!",
       icons: [
-        { icon: Icons.Home, text: "Proyectos Personalizados para Cada Espacio" },
+        {
+          icon: Icons.Home,
+          text: "Proyectos Personalizados para Cada Espacio",
+        },
         { icon: Icons.Droplet, text: "Soluciones Innovadoras y Sostenibles" },
-        { icon: Icons.Layers, text: "Materiales de Alta Gama y Larga Durabilidad" },
+        {
+          icon: Icons.Layers,
+          text: "Materiales de Alta Gama y Larga Durabilidad",
+        },
         { icon: Icons.Lightbulb, text: "Diseño de Interiores que Inspira" },
         {
           icon: Icons.CheckCircle,
@@ -130,80 +137,86 @@ const ReformasData: ServicesReformas[] = [
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733319801/fn7px9zicbna4mwqhm6z.jpg",
   },
   {
-  name: "Pladur",
-  title: "¡Crea Espacios Versátiles y Modernos con Instalaciones de Pladur de Reformas Ya Barcelona!",
-  description:
-    "El pladur es la solución ideal para construir espacios funcionales y estéticamente impecables. Desde tabiques hasta techos y revestimientos, te ofrecemos acabados de alta calidad que se adaptan a cualquier estilo.",
-  doforyour: {
-    title: "¡Reinventa tu Hogar o Local con Pladur!",
-    icons: [
-      { icon: Icons.Layers, text: "Tabiques y Techos a Medida" },
-      { icon: Icons.Lightbulb, text: "Sistemas de Iluminación Integrados" },
-      { icon: Icons.Home, text: "Aislamiento Térmico y Acústico" },
-      { icon: Icons.CheckCircle, text: "Montaje Rápido y Duradero" },
-      { icon: Icons.Box, text: "Soluciones Creativas para Espacios Reducidos" },
-    ],
+    name: "Pladur",
+    title:
+      "¡Crea Espacios Versátiles y Modernos con Instalaciones de Pladur de Reformas Ya Barcelona!",
+    description:
+      "El pladur es la solución ideal para construir espacios funcionales y estéticamente impecables. Desde tabiques hasta techos y revestimientos, te ofrecemos acabados de alta calidad que se adaptan a cualquier estilo.",
+    doforyour: {
+      title: "¡Reinventa tu Hogar o Local con Pladur!",
+      icons: [
+        { icon: Icons.Layers, text: "Tabiques y Techos a Medida" },
+        { icon: Icons.Lightbulb, text: "Sistemas de Iluminación Integrados" },
+        { icon: Icons.Home, text: "Aislamiento Térmico y Acústico" },
+        { icon: Icons.CheckCircle, text: "Montaje Rápido y Duradero" },
+        {
+          icon: Icons.Box,
+          text: "Soluciones Creativas para Espacios Reducidos",
+        },
+      ],
+    },
+    href: "reforma-pladur",
+    img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397012/wixolg0ovovz4damhrn8.jpg",
   },
-  href: "reforma-pladur",
-  img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397012/wixolg0ovovz4damhrn8.jpg",
-},
-{
-  name: "Fontanería",
-  title: "¡Soluciones de Fontanería Eficientes y Confiables con Reformas Ya Barcelona!",
-  description:
-    "¿Problemas con tus tuberías o necesitas renovar tu sistema de fontanería? Nuestro equipo de profesionales garantiza instalaciones modernas, eficientes y libres de preocupaciones.",
-  doforyour: {
-    title: "¡Hacemos que el Agua Fluya sin Problemas!",
-    icons: [
-      { icon: Icons.Droplet, text: "Instalaciones y Reparaciones Complejas" },
-      { icon: Icons.Wrench, text: "Mantenimiento Preventivo y Correctivo" },
-      { icon: Icons.Plug, text: "Sistemas de Agua Caliente Eficientes" },
-      { icon: Icons.Box, text: "Renovación Completa de Baños y Cocinas" },
-      { icon: Icons.CheckCircle, text: "Soluciones Rápidas y Garantizadas" },
-    ],
+  {
+    name: "Fontanería",
+    title:
+      "¡Soluciones de Fontanería Eficientes y Confiables con Reformas Ya Barcelona!",
+    description:
+      "¿Problemas con tus tuberías o necesitas renovar tu sistema de fontanería? Nuestro equipo de profesionales garantiza instalaciones modernas, eficientes y libres de preocupaciones.",
+    doforyour: {
+      title: "¡Hacemos que el Agua Fluya sin Problemas!",
+      icons: [
+        { icon: Icons.Droplet, text: "Instalaciones y Reparaciones Complejas" },
+        { icon: Icons.Wrench, text: "Mantenimiento Preventivo y Correctivo" },
+        { icon: Icons.Plug, text: "Sistemas de Agua Caliente Eficientes" },
+        { icon: Icons.Box, text: "Renovación Completa de Baños y Cocinas" },
+        { icon: Icons.CheckCircle, text: "Soluciones Rápidas y Garantizadas" },
+      ],
+    },
+    href: "reforma-fontaneria",
+    img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397175/ttyz9lpmjzvxprg4pc26.jpg",
   },
-  href: "reforma-fontaneria",
-  img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397175/ttyz9lpmjzvxprg4pc26.jpg",
-},
-{
-  name: "Reforma de Oficinas",
-  title: "¡Transforma tu Espacio de Trabajo con las Reformas de Oficinas de Reformas Ya Barcelona!",
-  description:
-    "¿Buscas una oficina moderna, funcional y acorde a las necesidades de tu equipo? Reformas Ya Barcelona convierte cualquier espacio en un lugar productivo y estilizado.",
-  doforyour: {
-    title: "¡Crea Oficinas que Inspiran y Motivan!",
-    icons: [
-      { icon: Icons.Home, text: "Diseño Ergonométrico y Funcional" },
-      { icon: Icons.Lightbulb, text: "Iluminación Profesional y Ambiental" },
-      { icon: Icons.Box, text: "Espacios de Almacenaje Inteligentes" },
-      { icon: Icons.Palette, text: "Acabados Modernos y Elegantes" },
-      { icon: Icons.CheckCircle, text: "Adecuación Técnica y Cableado Eficiente" },
-    ],
+  {
+    name: "Reforma de Oficinas",
+    title:
+      "¡Transforma tu Espacio de Trabajo con las Reformas de Oficinas de Reformas Ya Barcelona!",
+    description:
+      "¿Buscas una oficina moderna, funcional y acorde a las necesidades de tu equipo? Reformas Ya Barcelona convierte cualquier espacio en un lugar productivo y estilizado.",
+    doforyour: {
+      title: "¡Crea Oficinas que Inspiran y Motivan!",
+      icons: [
+        { icon: Icons.Home, text: "Diseño Ergonométrico y Funcional" },
+        { icon: Icons.Lightbulb, text: "Iluminación Profesional y Ambiental" },
+        { icon: Icons.Box, text: "Espacios de Almacenaje Inteligentes" },
+        { icon: Icons.Palette, text: "Acabados Modernos y Elegantes" },
+        {
+          icon: Icons.CheckCircle,
+          text: "Adecuación Técnica y Cableado Eficiente",
+        },
+      ],
+    },
+    href: "reforma-oficinas",
+    img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397096/y4qgps38o0squksbboto.jpg",
   },
-  href: "reforma-oficinas",
-  img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397096/y4qgps38o0squksbboto.jpg",
-},
-{
-  name: "Obras Menores",
-  title: "¡Pequeñas Obras, Grandes Resultados con Reformas Ya Barcelona!",
-  description:
-    "¿Necesitas ajustes o reparaciones rápidas? En Reformas Ya Barcelona atendemos pequeñas obras con el mismo compromiso y calidad que los grandes proyectos.",
-  doforyour: {
-    title: "¡Resolvemos Tus Necesidades con Rapidez y Precisión!",
-    icons: [
-      { icon: Icons.Wrench, text: "Reparaciones y Ajustes Precisos" },
-      { icon: Icons.Paintbrush, text: "Pequeños Trabajos de Pintura" },
-      { icon: Icons.Layers, text: "Revestimientos y Mejoras Puntuales" },
-      { icon: Icons.Box, text: "Montaje de Muebles y Elementos Decorativos" },
-      { icon: Icons.CheckCircle, text: "Atención Rápida y Profesional" },
-    ],
+  {
+    name: "Obras Menores",
+    title: "¡Pequeñas Obras, Grandes Resultados con Reformas Ya Barcelona!",
+    description:
+      "¿Necesitas ajustes o reparaciones rápidas? En Reformas Ya Barcelona atendemos pequeñas obras con el mismo compromiso y calidad que los grandes proyectos.",
+    doforyour: {
+      title: "¡Resolvemos Tus Necesidades con Rapidez y Precisión!",
+      icons: [
+        { icon: Icons.Wrench, text: "Reparaciones y Ajustes Precisos" },
+        { icon: Icons.Paintbrush, text: "Pequeños Trabajos de Pintura" },
+        { icon: Icons.Layers, text: "Revestimientos y Mejoras Puntuales" },
+        { icon: Icons.Box, text: "Montaje de Muebles y Elementos Decorativos" },
+        { icon: Icons.CheckCircle, text: "Atención Rápida y Profesional" },
+      ],
+    },
+    href: "obras-menores",
+    img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733396757/rvy4iclukm3duyo48wsl.jpg",
   },
-  href: "obras-menores",
-  img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733396757/rvy4iclukm3duyo48wsl.jpg",
-},
-
 ];
-
-
 
 export default ReformasData;

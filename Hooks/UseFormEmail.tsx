@@ -9,7 +9,8 @@ interface FormData {
   numero: string;
   servicio: string;
   nombre: string;
-  comentario: string;
+  comentario?: string;
+  presupuesto?: string;
 }
 
 const UseFormEmail = () => {
@@ -37,6 +38,7 @@ const UseFormEmail = () => {
           email: data.email,
           numero: data.numero,
           servicio: data.servicio,
+          presupuesto: data.presupuesto,
           comentario: data.comentario,
         },
         process.env.NEXT_PUBLIC_EMAILSJS_PUBLIC_KEY || "", // Ensure the public key is defined

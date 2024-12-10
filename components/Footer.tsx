@@ -2,7 +2,6 @@ import Link from "./Link";
 import siteMetadata from "@/data/siteMetadata";
 import SocialIcon from "@/components/social-icons";
 
-
 const Footer = () => {
   return (
     <footer className="mt-16 border-t border-gray-200 dark:border-gray-700">
@@ -16,17 +15,26 @@ const Footer = () => {
           <nav className="mt-4 sm:mt-0">
             <ul className="flex space-x-4 text-sm">
               <li>
-                <Link href="/" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors">
+                <Link
+                  href="/"
+                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors"
+                >
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors">
+                <Link
+                  href="/about"
+                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors"
+                >
                   Sobre Nosotros
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors">
+                <Link
+                  href="/contacto"
+                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors"
+                >
                   Contacto
                 </Link>
               </li>
@@ -36,13 +44,12 @@ const Footer = () => {
         <div className="mt-4 text-center text-xs text-gray-400 dark:text-gray-500">
           <Link href="/" className="hover:underline">
             {siteMetadata.title}
-          </Link>
-          {' '}- Todos los derechos reservados
+          </Link>{" "}
+          - Todos los derechos reservados
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
-
+export default Footer;
