@@ -42,7 +42,7 @@ const ComoTrabajamos = () => {
               className="bg-white rounded-lg shadow-lg p-6 transition-transform duration-300 hover:scale-105"
             >
               <div className="flex justify-center mb-4">
-                <paso.icon className="w-12 h-12 text-primary" />
+                <paso.icon className="w-12 h-12 text-primary text-black" />
               </div>
               <h3 className="text-xl font-semibold text-center mb-2">
                 {paso.title}

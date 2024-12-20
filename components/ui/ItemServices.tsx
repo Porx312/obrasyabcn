@@ -118,7 +118,7 @@ const ItemServices = () => {
       </h2>
       <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
         Selecciona uno de nuestros servicios y lo mejor es que el{" "}
-        <span className="text-orange-500">presupuesto es gratis!</span>
+        <span className="text-yellow-500">presupuesto es gratis!</span>
       </p>
       {/* Lista de servicios */}
       <ul

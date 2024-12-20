@@ -44,7 +44,7 @@ const Header = () => {
               </Link>
             ))}
         </div>
-        <FormularioAlerta text="presupuesto 👇" className="" />
+        <FormularioAlerta text="presupuesto" className="" />
         <SearchButton />
         <ThemeSwitch />
         <MobileNav />

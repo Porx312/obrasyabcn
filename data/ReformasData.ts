@@ -25,6 +25,11 @@ const Icons = {
   Wrench,
 };
 
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
 // Definimos la interfaz que estructura la información de los servicios de reformas.
 interface ServicesReformas {
   name: string; // Nombre del servicio (e.g., "Pintura", "Cocina")
@@ -36,6 +41,7 @@ interface ServicesReformas {
   };
   href: string; // Enlace para más detalles del servicio
   img: string;
+  FaqData: FAQItem[]
 }
 
 // Datos de las reformas, estructurados y mejor organizados.
@@ -64,8 +70,40 @@ const ReformasData: ServicesReformas[] = [
     },
     href: "reforma-pintura",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733315345/coiwowmwsulew2w6gk05.jpg",
+    FaqData:[
+      {
+        question: "Pintura",
+        answer:
+          "Nuestro servicio de reformas integrales cubre todo el proceso de transformación de tu espacio, desde la demolición inicial hasta la instalación de sistemas eléctricos, fontanería, revestimientos, y acabados finales como pintura, carpintería y decoración. Nos aseguramos de entregar un resultado completamente listo para usar.",
+      },
+      {
+        question: "¿Cuánto tiempo se necesita para completar una reforma integral?",
+        answer:
+          "El tiempo de ejecución depende del tamaño y la complejidad del proyecto. Por lo general, una reforma integral tarda entre 6 y 12 semanas. Reformas más específicas, como baños o cocinas, pueden completarse en 2 a 4 semanas.",
+      },
+      {
+        question: "¿Ayudan con el diseño y la planificación de la reforma?",
+        answer:
+          "Sí, ofrecemos asesoramiento profesional en diseño para crear espacios funcionales y estéticamente atractivos. Te ayudamos a elegir materiales, distribución de espacios y acabados que reflejen tu estilo y se ajusten a tu presupuesto.",
+      },
+      {
+        question: "¿Es necesario solicitar permisos para realizar una reforma?",
+        answer:
+          "En muchos casos, sí. Trabajos que afecten estructuras, fachadas o instalaciones mayores suelen requerir permisos municipales. No te preocupes, nos encargamos de gestionar toda la documentación y permisos necesarios para que no tengas que preocuparte por nada.",
+      },
+      {
+        question: "¿Cómo se determina el costo de una reforma?",
+        answer:
+          "El costo varía según el tamaño del espacio, la calidad de los materiales y la complejidad del proyecto. Ofrecemos presupuestos claros y detallados, adaptados a tus necesidades, para que tengas una idea precisa del costo antes de comenzar.",
+      },
+      {
+        question: "¿Qué beneficios ofrece trabajar con su empresa?",
+        answer:
+          "Contamos con un equipo profesional con experiencia, garantizamos calidad en cada detalle y ofrecemos un servicio integral, desde el diseño hasta la ejecución. Además, priorizamos la transparencia en los costos y los plazos de entrega.",
+      },
+    ]
   },
-  {
+   {
     name: "Reforma de Cocina",
     title:
       "¡Haz de Tu Cocina el Corazón de Tu Hogar con Reformas Ya Barcelona!",
@@ -86,6 +124,38 @@ const ReformasData: ServicesReformas[] = [
     },
     href: "reforma-cocina",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733315205/t5eej5opgmqvu1fjuvmg.jpg",
+    FaqData:[
+      {
+        question: "Pintura",
+        answer:
+          "Nuestro servicio de reformas integrales cubre todo el proceso de transformación de tu espacio, desde la demolición inicial hasta la instalación de sistemas eléctricos, fontanería, revestimientos, y acabados finales como pintura, carpintería y decoración. Nos aseguramos de entregar un resultado completamente listo para usar.",
+      },
+      {
+        question: "¿Cuánto tiempo se necesita para completar una reforma integral?",
+        answer:
+          "El tiempo de ejecución depende del tamaño y la complejidad del proyecto. Por lo general, una reforma integral tarda entre 6 y 12 semanas. Reformas más específicas, como baños o cocinas, pueden completarse en 2 a 4 semanas.",
+      },
+      {
+        question: "¿Ayudan con el diseño y la planificación de la reforma?",
+        answer:
+          "Sí, ofrecemos asesoramiento profesional en diseño para crear espacios funcionales y estéticamente atractivos. Te ayudamos a elegir materiales, distribución de espacios y acabados que reflejen tu estilo y se ajusten a tu presupuesto.",
+      },
+      {
+        question: "¿Es necesario solicitar permisos para realizar una reforma?",
+        answer:
+          "En muchos casos, sí. Trabajos que afecten estructuras, fachadas o instalaciones mayores suelen requerir permisos municipales. No te preocupes, nos encargamos de gestionar toda la documentación y permisos necesarios para que no tengas que preocuparte por nada.",
+      },
+      {
+        question: "¿Cómo se determina el costo de una reforma?",
+        answer:
+          "El costo varía según el tamaño del espacio, la calidad de los materiales y la complejidad del proyecto. Ofrecemos presupuestos claros y detallados, adaptados a tus necesidades, para que tengas una idea precisa del costo antes de comenzar.",
+      },
+      {
+        question: "¿Qué beneficios ofrece trabajar con su empresa?",
+        answer:
+          "Contamos con un equipo profesional con experiencia, garantizamos calidad en cada detalle y ofrecemos un servicio integral, desde el diseño hasta la ejecución. Además, priorizamos la transparencia en los costos y los plazos de entrega.",
+      },
+    ]
   },
   {
     name: "Reforma de Baño",
@@ -107,6 +177,38 @@ const ReformasData: ServicesReformas[] = [
     },
     href: "reforma-banos",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1732883130/rexn3klewfnucdfzxbyz.jpg",
+    FaqData:[
+      {
+        question: "Pintura",
+        answer:
+          "Nuestro servicio de reformas integrales cubre todo el proceso de transformación de tu espacio, desde la demolición inicial hasta la instalación de sistemas eléctricos, fontanería, revestimientos, y acabados finales como pintura, carpintería y decoración. Nos aseguramos de entregar un resultado completamente listo para usar.",
+      },
+      {
+        question: "¿Cuánto tiempo se necesita para completar una reforma integral?",
+        answer:
+          "El tiempo de ejecución depende del tamaño y la complejidad del proyecto. Por lo general, una reforma integral tarda entre 6 y 12 semanas. Reformas más específicas, como baños o cocinas, pueden completarse en 2 a 4 semanas.",
+      },
+      {
+        question: "¿Ayudan con el diseño y la planificación de la reforma?",
+        answer:
+          "Sí, ofrecemos asesoramiento profesional en diseño para crear espacios funcionales y estéticamente atractivos. Te ayudamos a elegir materiales, distribución de espacios y acabados que reflejen tu estilo y se ajusten a tu presupuesto.",
+      },
+      {
+        question: "¿Es necesario solicitar permisos para realizar una reforma?",
+        answer:
+          "En muchos casos, sí. Trabajos que afecten estructuras, fachadas o instalaciones mayores suelen requerir permisos municipales. No te preocupes, nos encargamos de gestionar toda la documentación y permisos necesarios para que no tengas que preocuparte por nada.",
+      },
+      {
+        question: "¿Cómo se determina el costo de una reforma?",
+        answer:
+          "El costo varía según el tamaño del espacio, la calidad de los materiales y la complejidad del proyecto. Ofrecemos presupuestos claros y detallados, adaptados a tus necesidades, para que tengas una idea precisa del costo antes de comenzar.",
+      },
+      {
+        question: "¿Qué beneficios ofrece trabajar con su empresa?",
+        answer:
+          "Contamos con un equipo profesional con experiencia, garantizamos calidad en cada detalle y ofrecemos un servicio integral, desde el diseño hasta la ejecución. Además, priorizamos la transparencia en los costos y los plazos de entrega.",
+      },
+    ]
   },
   {
     name: "Reforma Integral",
@@ -135,6 +237,38 @@ const ReformasData: ServicesReformas[] = [
     },
     href: "reforma-integral",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733319801/fn7px9zicbna4mwqhm6z.jpg",
+    FaqData:[
+      {
+        question: "Pintura",
+        answer:
+          "Nuestro servicio de reformas integrales cubre todo el proceso de transformación de tu espacio, desde la demolición inicial hasta la instalación de sistemas eléctricos, fontanería, revestimientos, y acabados finales como pintura, carpintería y decoración. Nos aseguramos de entregar un resultado completamente listo para usar.",
+      },
+      {
+        question: "¿Cuánto tiempo se necesita para completar una reforma integral?",
+        answer:
+          "El tiempo de ejecución depende del tamaño y la complejidad del proyecto. Por lo general, una reforma integral tarda entre 6 y 12 semanas. Reformas más específicas, como baños o cocinas, pueden completarse en 2 a 4 semanas.",
+      },
+      {
+        question: "¿Ayudan con el diseño y la planificación de la reforma?",
+        answer:
+          "Sí, ofrecemos asesoramiento profesional en diseño para crear espacios funcionales y estéticamente atractivos. Te ayudamos a elegir materiales, distribución de espacios y acabados que reflejen tu estilo y se ajusten a tu presupuesto.",
+      },
+      {
+        question: "¿Es necesario solicitar permisos para realizar una reforma?",
+        answer:
+          "En muchos casos, sí. Trabajos que afecten estructuras, fachadas o instalaciones mayores suelen requerir permisos municipales. No te preocupes, nos encargamos de gestionar toda la documentación y permisos necesarios para que no tengas que preocuparte por nada.",
+      },
+      {
+        question: "¿Cómo se determina el costo de una reforma?",
+        answer:
+          "El costo varía según el tamaño del espacio, la calidad de los materiales y la complejidad del proyecto. Ofrecemos presupuestos claros y detallados, adaptados a tus necesidades, para que tengas una idea precisa del costo antes de comenzar.",
+      },
+      {
+        question: "¿Qué beneficios ofrece trabajar con su empresa?",
+        answer:
+          "Contamos con un equipo profesional con experiencia, garantizamos calidad en cada detalle y ofrecemos un servicio integral, desde el diseño hasta la ejecución. Además, priorizamos la transparencia en los costos y los plazos de entrega.",
+      },
+    ]
   },
   {
     name: "Pladur",
@@ -157,6 +291,38 @@ const ReformasData: ServicesReformas[] = [
     },
     href: "reforma-pladur",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397012/wixolg0ovovz4damhrn8.jpg",
+    FaqData:[
+      {
+        question: "Pintura",
+        answer:
+          "Nuestro servicio de reformas integrales cubre todo el proceso de transformación de tu espacio, desde la demolición inicial hasta la instalación de sistemas eléctricos, fontanería, revestimientos, y acabados finales como pintura, carpintería y decoración. Nos aseguramos de entregar un resultado completamente listo para usar.",
+      },
+      {
+        question: "¿Cuánto tiempo se necesita para completar una reforma integral?",
+        answer:
+          "El tiempo de ejecución depende del tamaño y la complejidad del proyecto. Por lo general, una reforma integral tarda entre 6 y 12 semanas. Reformas más específicas, como baños o cocinas, pueden completarse en 2 a 4 semanas.",
+      },
+      {
+        question: "¿Ayudan con el diseño y la planificación de la reforma?",
+        answer:
+          "Sí, ofrecemos asesoramiento profesional en diseño para crear espacios funcionales y estéticamente atractivos. Te ayudamos a elegir materiales, distribución de espacios y acabados que reflejen tu estilo y se ajusten a tu presupuesto.",
+      },
+      {
+        question: "¿Es necesario solicitar permisos para realizar una reforma?",
+        answer:
+          "En muchos casos, sí. Trabajos que afecten estructuras, fachadas o instalaciones mayores suelen requerir permisos municipales. No te preocupes, nos encargamos de gestionar toda la documentación y permisos necesarios para que no tengas que preocuparte por nada.",
+      },
+      {
+        question: "¿Cómo se determina el costo de una reforma?",
+        answer:
+          "El costo varía según el tamaño del espacio, la calidad de los materiales y la complejidad del proyecto. Ofrecemos presupuestos claros y detallados, adaptados a tus necesidades, para que tengas una idea precisa del costo antes de comenzar.",
+      },
+      {
+        question: "¿Qué beneficios ofrece trabajar con su empresa?",
+        answer:
+          "Contamos con un equipo profesional con experiencia, garantizamos calidad en cada detalle y ofrecemos un servicio integral, desde el diseño hasta la ejecución. Además, priorizamos la transparencia en los costos y los plazos de entrega.",
+      },
+    ]
   },
   {
     name: "Fontanería",
@@ -176,6 +342,38 @@ const ReformasData: ServicesReformas[] = [
     },
     href: "reforma-fontaneria",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397175/ttyz9lpmjzvxprg4pc26.jpg",
+    FaqData:[
+      {
+        question: "Pintura",
+        answer:
+          "Nuestro servicio de reformas integrales cubre todo el proceso de transformación de tu espacio, desde la demolición inicial hasta la instalación de sistemas eléctricos, fontanería, revestimientos, y acabados finales como pintura, carpintería y decoración. Nos aseguramos de entregar un resultado completamente listo para usar.",
+      },
+      {
+        question: "¿Cuánto tiempo se necesita para completar una reforma integral?",
+        answer:
+          "El tiempo de ejecución depende del tamaño y la complejidad del proyecto. Por lo general, una reforma integral tarda entre 6 y 12 semanas. Reformas más específicas, como baños o cocinas, pueden completarse en 2 a 4 semanas.",
+      },
+      {
+        question: "¿Ayudan con el diseño y la planificación de la reforma?",
+        answer:
+          "Sí, ofrecemos asesoramiento profesional en diseño para crear espacios funcionales y estéticamente atractivos. Te ayudamos a elegir materiales, distribución de espacios y acabados que reflejen tu estilo y se ajusten a tu presupuesto.",
+      },
+      {
+        question: "¿Es necesario solicitar permisos para realizar una reforma?",
+        answer:
+          "En muchos casos, sí. Trabajos que afecten estructuras, fachadas o instalaciones mayores suelen requerir permisos municipales. No te preocupes, nos encargamos de gestionar toda la documentación y permisos necesarios para que no tengas que preocuparte por nada.",
+      },
+      {
+        question: "¿Cómo se determina el costo de una reforma?",
+        answer:
+          "El costo varía según el tamaño del espacio, la calidad de los materiales y la complejidad del proyecto. Ofrecemos presupuestos claros y detallados, adaptados a tus necesidades, para que tengas una idea precisa del costo antes de comenzar.",
+      },
+      {
+        question: "¿Qué beneficios ofrece trabajar con su empresa?",
+        answer:
+          "Contamos con un equipo profesional con experiencia, garantizamos calidad en cada detalle y ofrecemos un servicio integral, desde el diseño hasta la ejecución. Además, priorizamos la transparencia en los costos y los plazos de entrega.",
+      },
+    ]
   },
   {
     name: "Reforma de Oficinas",
@@ -198,6 +396,38 @@ const ReformasData: ServicesReformas[] = [
     },
     href: "reforma-oficinas",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733397096/y4qgps38o0squksbboto.jpg",
+    FaqData:[
+      {
+        question: "Pintura",
+        answer:
+          "Nuestro servicio de reformas integrales cubre todo el proceso de transformación de tu espacio, desde la demolición inicial hasta la instalación de sistemas eléctricos, fontanería, revestimientos, y acabados finales como pintura, carpintería y decoración. Nos aseguramos de entregar un resultado completamente listo para usar.",
+      },
+      {
+        question: "¿Cuánto tiempo se necesita para completar una reforma integral?",
+        answer:
+          "El tiempo de ejecución depende del tamaño y la complejidad del proyecto. Por lo general, una reforma integral tarda entre 6 y 12 semanas. Reformas más específicas, como baños o cocinas, pueden completarse en 2 a 4 semanas.",
+      },
+      {
+        question: "¿Ayudan con el diseño y la planificación de la reforma?",
+        answer:
+          "Sí, ofrecemos asesoramiento profesional en diseño para crear espacios funcionales y estéticamente atractivos. Te ayudamos a elegir materiales, distribución de espacios y acabados que reflejen tu estilo y se ajusten a tu presupuesto.",
+      },
+      {
+        question: "¿Es necesario solicitar permisos para realizar una reforma?",
+        answer:
+          "En muchos casos, sí. Trabajos que afecten estructuras, fachadas o instalaciones mayores suelen requerir permisos municipales. No te preocupes, nos encargamos de gestionar toda la documentación y permisos necesarios para que no tengas que preocuparte por nada.",
+      },
+      {
+        question: "¿Cómo se determina el costo de una reforma?",
+        answer:
+          "El costo varía según el tamaño del espacio, la calidad de los materiales y la complejidad del proyecto. Ofrecemos presupuestos claros y detallados, adaptados a tus necesidades, para que tengas una idea precisa del costo antes de comenzar.",
+      },
+      {
+        question: "¿Qué beneficios ofrece trabajar con su empresa?",
+        answer:
+          "Contamos con un equipo profesional con experiencia, garantizamos calidad en cada detalle y ofrecemos un servicio integral, desde el diseño hasta la ejecución. Además, priorizamos la transparencia en los costos y los plazos de entrega.",
+      },
+    ]
   },
   {
     name: "Obras Menores",
@@ -216,7 +446,39 @@ const ReformasData: ServicesReformas[] = [
     },
     href: "obras-menores",
     img: "https://res.cloudinary.com/dq0pfesxe/image/upload/v1733396757/rvy4iclukm3duyo48wsl.jpg",
-  },
+    FaqData:[
+      {
+        question: "Pintura",
+        answer:
+          "Nuestro servicio de reformas integrales cubre todo el proceso de transformación de tu espacio, desde la demolición inicial hasta la instalación de sistemas eléctricos, fontanería, revestimientos, y acabados finales como pintura, carpintería y decoración. Nos aseguramos de entregar un resultado completamente listo para usar.",
+      },
+      {
+        question: "¿Cuánto tiempo se necesita para completar una reforma integral?",
+        answer:
+          "El tiempo de ejecución depende del tamaño y la complejidad del proyecto. Por lo general, una reforma integral tarda entre 6 y 12 semanas. Reformas más específicas, como baños o cocinas, pueden completarse en 2 a 4 semanas.",
+      },
+      {
+        question: "¿Ayudan con el diseño y la planificación de la reforma?",
+        answer:
+          "Sí, ofrecemos asesoramiento profesional en diseño para crear espacios funcionales y estéticamente atractivos. Te ayudamos a elegir materiales, distribución de espacios y acabados que reflejen tu estilo y se ajusten a tu presupuesto.",
+      },
+      {
+        question: "¿Es necesario solicitar permisos para realizar una reforma?",
+        answer:
+          "En muchos casos, sí. Trabajos que afecten estructuras, fachadas o instalaciones mayores suelen requerir permisos municipales. No te preocupes, nos encargamos de gestionar toda la documentación y permisos necesarios para que no tengas que preocuparte por nada.",
+      },
+      {
+        question: "¿Cómo se determina el costo de una reforma?",
+        answer:
+          "El costo varía según el tamaño del espacio, la calidad de los materiales y la complejidad del proyecto. Ofrecemos presupuestos claros y detallados, adaptados a tus necesidades, para que tengas una idea precisa del costo antes de comenzar.",
+      },
+      {
+        question: "¿Qué beneficios ofrece trabajar con su empresa?",
+        answer:
+          "Contamos con un equipo profesional con experiencia, garantizamos calidad en cada detalle y ofrecemos un servicio integral, desde el diseño hasta la ejecución. Además, priorizamos la transparencia en los costos y los plazos de entrega.",
+      },
+    ]
+  }, 
 ];
 
 export default ReformasData;

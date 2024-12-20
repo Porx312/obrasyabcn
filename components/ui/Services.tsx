@@ -12,7 +12,7 @@ const Services = () => {
         <p className="text-lg leading-7 text-gray-600 dark:text-gray-400">
           Desde reformas integrales hasta renovaciones específicas, nuestro
           equipo se dedica a transformar espacios con pasión y profesionalismo.
-          <strong className="text-orange-500">
+          <strong className="text-yellow-500">
             {" "}
             Tu proyecto es nuestra prioridad.{" "}
           </strong>

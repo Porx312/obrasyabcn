@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import { Star, Check, Phone, Calendar } from "lucide-react";
 import FormularioAlerta from "../FormularioAlerta";
-import { ServicesSlider } from "../SlideShow/ServicerSlider";
 
 interface Testimonial {
   name: string;

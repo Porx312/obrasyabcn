@@ -1,6 +1,7 @@
 import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
 import DoForYou from "@/components/ui/ServicesUi/DoForYou";
 import EngagementSection from "@/components/ui/ServicesUi/Engangement";
+import FAQSectionServices from "@/components/ui/ServicesUi/Faq";
 import ServicesHeader from "@/components/ui/ServicesUi/ServicesHeader";
 import VentajasSection from "@/components/ui/ServicesUi/VentajasSection";
 import ReformasData from "@/data/ReformasData";
@@ -56,6 +57,7 @@ export default async function Page({
       <VentajasSection />
       <EngagementSection name={item.name} />
       <FloatingWhatsAppButton />
+      <FAQSectionServices faqData={item.FaqData} />
     </>
   );
 }

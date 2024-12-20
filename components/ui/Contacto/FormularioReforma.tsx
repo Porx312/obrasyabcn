@@ -9,7 +9,6 @@ export default function FormularioReforma() {
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({
     servicio: "",
-    presupuesto: "",
     nombre: "",
     email: "",
     telefono: "",
@@ -25,12 +24,7 @@ export default function FormularioReforma() {
       type: "text",
       placeholder: "Ej: Cocina, baño, integral...",
     },
-    {
-      key: "presupuesto",
-      label: "¿Cuál es tu presupuesto estimado?",
-      type: "number",
-      placeholder: "Ej: 10000",
-    },
+
     {
       key: "nombre",
       label: "¿Cuál es tu nombre?",
@@ -77,7 +71,6 @@ export default function FormularioReforma() {
       email: formData.email,
       numero: formData.telefono,
       servicio: formData.servicio,
-      presupuesto: formData.presupuesto,
     };
     onSubmit(datosFormateados); // Call the onSubmit method from the useFormEmail hook
   };

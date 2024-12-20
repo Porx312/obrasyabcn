@@ -19,11 +19,11 @@ export default function Home({ posts }) {
               {siteMetadata.description}.
             </p>
             <h1 className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-              En ObrasYaBcn nos especializamos en diseñar y reformar ambientes
+              En <strong>ObrasYaBcn</strong> nos especializamos en diseñar y reformar ambientes
               que reflejan tu estilo único. Ya sea que quieras renovar tu hogar,
               oficina o cualquier otro espacio, nuestro equipo de expertos se
               encarga de todo: desde la planificación hasta la ejecución, con la
-              garantía de calidad y compromiso 👇
+              garantía de calidad y compromiso.
             </h1>
             <FormularioReforma />
           </div>
